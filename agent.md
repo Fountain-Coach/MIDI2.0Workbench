@@ -1,115 +1,225 @@
-# [agent.md](https://agent.md) — MIDI 2.0 Swift Library from Workbench Fork (Single-Agent Plan)
+# agent.md — Static-Only MIDI 2.0 Swift Library from Workbench Source
 
 > **Objective**  
-> From **this Workbench fork**, derive an authoritative, machine-readable **MIDI 2.0 contract**, generate a **Swift library** from it, validate via **golden vectors** and **Workbench interop**, and ship with a **compliance checklist**. This file is the single source of truth the agent follows end-to-end.
+> Build a **complete Swift MIDI-2 library** by **learning from** (but **not running**) the MIDI 2.0 Workbench repo.  
+> Extract protocol facts **statically** from the TypeScript source (AST), generate **fully implemented** Swift (no stubs), and ship with **compiling tests** that validate bit-accurate packing/unpacking and spec invariants.  
+> **No Workbench execution, no GUI/CLI, no headless runner.**
 
 ---
 
-## 0) Project Contract (What “Done” Means)
+## 0) Constraints & Success Criteria
 
-- **Spec Coverage (v1)**: UMP (Stream/Utility/System/ChannelVoice 2.0), MIDI-CI Discovery + Protocol Negotiation, at least **one** Profile, Property Exchange Foundational Resources.
-- **Artifacts**:
-  - `contract/midi2.json` — canonical spec contract (schemas + state machines + enums) with provenance.
-  - `vectors/golden/*.json` — encode/decode + CI dialogue vectors.
-  - `swift/Midi2Swift/` — SwiftPM package (UMP, CI, Profiles, PE).
-  - `reports/compliance/` — exported checklist files from Workbench runs.
-- **Determinism**: Re-running extraction on the same Workbench commit produces byte-identical outputs.
-- **Tests**: All golden vectors pass; CI green; Workbench interop passes manual/optional headless run.
+- **No runtime dependency** on Workbench: only read its source files.
+- **No stubs**: generated Swift contains full bit operations, enums, and CI state logic; **zero `TODO/TBD/fatalError`**.
+- **Compiling tests**: test targets must compile and pass **without** Workbench or external tools.
+- **Deterministic outputs** from the same Workbench commit.
+- **Traceability**: every generated symbol carries provenance (file + line + commit).
 
 ---
 
-## 1) Preconditions (Agent Checklist)
+## 1) Inputs (read-only)
 
-- This repository is a **fork** of MIDI 2.0 Workbench.  
-- Node 18 LTS + Yarn installed.  
-- macOS or Linux host with virtual MIDI 2.0 endpoints available (Core MIDI on macOS).  
-- Swift toolchain (SwiftPM).  
-- Python 3.11+ (optional if you choose Python for codegen; Swift-only workflows are fine).
-
-> **Style/Conventions**
-> - Only add new modules/files; do not modify core Workbench protocol logic unless necessary.
-> - Preserve MIT attribution in headers where required.
-> - Commit codegen **inputs** and **goldens**; generated Swift sources may be committed if stable.
+- Workbench fork checkout at `WORKBENCH_ROOT` (TypeScript/JS).
+- Target source sets to parse (examples, adjust to repo):
+  - `packages/*/src/ump/**/*.{ts,tsx}`
+  - `packages/*/src/ci/**/*.{ts,tsx}`
+  - `packages/*/src/profiles/**/*.{ts,tsx}`
+  - `packages/*/src/property-exchange/**/*.{ts,tsx}`
+  - `packages/*/src/common/**/*.{ts,tsx}`
 
 ---
 
-## 2) Repository Layout (Target)
+## 2) Outputs
 
-```
+- `contract/midi2.json` — canonical machine contract: messages, fields, enums, constants, state machines, with provenance.
+- `vectors/golden/*.json` — **static** golden vectors (no Workbench execution): min/max/edge/invalid cases computed from field definitions & constants.
+- `swift/Midi2Swift/` — SwiftPM lib with modules: `Core`, `UMP`, `CI`, `Profiles`, `PropertyExchange`.
+- `swift/Midi2Swift/Tests/*` — unit tests that **compile and pass** offline.
+
+---
+
+## 3) Repository Layout
+
 (workbench fork root)
+
+```text
 ├── agent.md
-├── packages/                       # Workbench packages (leave intact)
 ├── scripts/
-│   ├── extract.ts                  # extractor → contract & vectors
-│   ├── export-checklist.ts         # export Workbench checklist
-│   └── headless-runner.ts          # optional JSON-RPC runner
+│   ├── extract-static.ts        # ts-morph AST → contract + goldens (no exec)
+│   └── verify-contract.ts       # structural sanity checks (node)
 ├── contract/
-│   └── midi2.json                  # generated contract
+│   └── midi2.json
 ├── vectors/
 │   └── golden/
 │       ├── ump_channel_voice.json
 │       ├── ump_system.json
-│       ├── ump_utility_stream.json
-│       ├── ci_dialogues.json
+│       ├── ump_utility.json
+│       ├── ci_statechart.json
 │       └── profiles_pe.json
 ├── swift/
 │   └── Midi2Swift/
 │       ├── Package.swift
-│       └── Sources/
+│       ├── Sources/{Core,UMP,CI,Profiles,PropertyExchange}/
+│       └── Tests/{CoreTests,UMPTests,CITests,ProfilesTests,GoldenVectorTests}/
+└── .github/workflows/ci.yml
 ```
 
 ---
 
-## 3) Agent Actions (Sequential)
+## 4) Static Extraction Approach (no execution)
 
-1. **Install & Validate Workbench**  
-   - Run `yarn install` at repo root.  
-   - Verify `yarn dev` launches Workbench UI.  
+### Tooling
+- **TypeScript AST** via `ts-morph` (Node 18+).
+- No `require()`/evaluation of repo code; **AST only**.
 
-2. **Automate Extraction**  
-   - Implement `scripts/extract.ts` to run Workbench headless and produce:
-     - `contract/midi2.json`
-     - `vectors/golden/*.json`
+### What to extract
+1. **Enums & constants**  
+   - Status nibbles, message type IDs, profile IDs, PE keys.  
+   - Record as `{name, value, width, file, line}`.
 
-3. **Swift Codegen**  
-   - Read `contract/midi2.json`; generate Swift types/enums/constants for:
-     - UMP packets and fields
-     - CI messages
-     - Profile descriptors
-     - Property Exchange descriptors
-   - Place generated files under `swift/Midi2Swift/Sources/`.
+2. **Message layouts (UMP 32/64)**  
+   - Locate encode/decode helpers or type aliases describing fields.  
+   - Derive for each message class:
+     - container size (32/64)
+     - ordered fields `{name, bitOffset, bitWidth, range?, enumRef?}`
+     - invariants (sum of widths, reserved bits = 0, etc.)
 
-4. **Golden Tests in Swift**  
-   - Create Swift tests that load each `vectors/golden/*.json` and:
-     - Encode → compare to reference bytes
-     - Decode → compare to reference JSON
-   - CI must pass on macOS and Linux.
+3. **MIDI-CI state machines**  
+   - Find reducers/handlers/switches; build a **statechart**: `{states, events, transitions (guard?, action?)}`.
 
-5. **Interop/Compliance**  
-   - Optionally run `scripts/headless-runner.ts` to connect Workbench to Swift binary over virtual MIDI 2.0.
-   - Export compliance checklist with `scripts/export-checklist.ts` into `reports/compliance/`.
+4. **Profiles & PE**  
+   - Profile identifiers, enable/disable rules if statically documented.  
+   - PE resource IDs and any JSON schemas embedded as constants.
 
-6. **Commit & Tag**  
-   - Commit both inputs and goldens.
-   - Tag a release once tests + checklist pass.
+### Determinism
+- Sort symbols lexicographically; fixed key order; uppercase hex; include `meta.workbench_commit`.
 
 ---
 
-## 4) Non-Goals (v1)
+## 5) Contract Schema (authoritative)
 
-- No SysEx 7/8 Stream Format beyond what Workbench supports in spec coverage.
-- No MIDI 1.0 translation layers unless generated automatically.
-- No manual spec transcription — all must originate from Workbench authoritative sources.
+```json
+{
+  "$schema": "https://fountain.example/schemas/midi2-contract.schema.json",
+  "meta": { "workbench_commit": "string", "generated_at": "ISO-8601" },
+  "enums": { "<EnumName>": { "type": "uintN|string", "values": { "<Case>": 0 } } },
+  "messages": [
+    {
+      "name": "ChannelVoiceV2.NoteOn",
+      "container": "UMP64",
+      "fields": [
+        { "name": "group", "bitOffset": 28, "bitWidth": 4, "range": [0,15] },
+        { "name": "channel", "bitOffset": 24, "bitWidth": 4, "range": [0,15] },
+        { "name": "statusNibble", "bitOffset": 20, "bitWidth": 4, "enum": "Status", "value": 9 },
+        { "name": "noteNumber", "bitOffset": 8, "bitWidth": 7, "range": [0,127] },
+        { "name": "velocity", "bitOffset": 0, "bitWidth": 16, "range": [0,65535] }
+      ],
+      "invariants": ["bits_sum == 64"],
+      "provenance": { "file": "packages/.../cv2.ts", "line": 123 }
+    }
+  ],
+  "state_machines": [
+    {
+      "name": "MIDI-CI.ProtocolNegotiation",
+      "states": ["Idle","OfferSent","Negotiated","Failed"],
+      "events": ["Start","Offer","Accept","Timeout","Error"],
+      "transitions": [
+        { "from": "Idle", "on": "Start", "to": "OfferSent", "action": "sendOffer" },
+        { "from": "OfferSent", "on": "Accept", "to": "Negotiated", "guard": "paramsOk" },
+        { "from": "OfferSent", "on": "Timeout", "to": "Failed" }
+      ],
+      "provenance": { "file": "packages/.../ci.ts", "line": 77 }
+    }
+  ],
+  "resources": { "PropertyExchange": { "schemas": [ { "id": "identity", "json_schema": {} } ] } }
+}
+```
 
 ---
 
-## 5) Future Extensions (v2+)
+## 6) Golden Vectors (static, compile-time)
 
-- Support all Profile specs and PE resources.
-- Add SysEx 8 Stream Format parsing.
-- Generate documentation site from `contract/midi2.json`.
-- Provide SwiftUI sample app using generated library.
+- For each message definition, generate cases:
+  - min, max, middle, invalid-low, invalid-high per ranged field.
+- For CI statecharts, generate event sequences (happy path, timeout, error).
+- Encode reference bytes from field math, not Workbench execution.
+- Store as JSON: `{ "case": "NoteOn_min", "raw": "0x....", "decoded": {...} }`.
 
 ---
 
-**EOF**
+## 7) Swift Generation (no stubs)
+
+### Mapping Rules
+- `container == UMP32|UMP64` → `struct UMP32/UMP64 { var raw: UInt32/UInt64 }`.
+- Each message → Swift struct with typed properties; add `init(fields…)`, `encode() -> UMP32/64`, `static func decode(_:) -> Self?`.
+- Enums → `enum Foo: UInt8/UInt16/String` with `init?(rawValue:)`.
+- CI state machines → pure reducer:
+  ```swift
+  struct CIState { /* generated fields */ }
+  enum CIEvent { /* generated */ }
+  enum CIAffect { case sendUMP([UInt32]), case none }
+  func reduce(_ s: CIState, _ e: CIEvent) -> (CIState, [CIAffect])
+  ```
+- Range enforcement with `precondition` and masked writes.
+
+Project:
+- SwiftPM `Package.swift`; modules Core, UMP, CI, Profiles, PropertyExchange.
+
+---
+
+## 8) Tests (compile & pass offline)
+
+- `GoldenVectorTests`: load `vectors/golden/*.json`, run encode/decode, compare raw bytes & decoded fields.
+- `CITests`: feed event sequences through reduce, assert end state & generated effects.
+- Invariants: bit-sum, reserved-zero, enum coverage.
+
+---
+
+## 9) Commands
+
+```bash
+# 1) Generate contract + goldens (static AST only)
+node scripts/extract-static.ts --root "$WORKBENCH_ROOT" --out contract/midi2.json --vectors vectors/golden
+
+# 2) Swift build & tests
+cd swift/Midi2Swift
+swift build
+swift test
+```
+
+---
+
+## 10) CI Policy (fail fast on stubs)
+
+- Fail if source contains `TODO|TBD|fatalError("unimplemented")`.
+- Fail if any message/enumeration in `contract/midi2.json` lacks a generated Swift type.
+- Fail if tests don’t compile or any test fails.
+- Record `workbench_commit` in build metadata.
+
+---
+
+## 11) Prompts (for your coding agent)
+
+**P1 — Static extractor**  
+Create `scripts/extract-static.ts` using `ts-morph`. Walk the given source globs. Emit `contract/midi2.json` and `vectors/golden/*.json` exactly per agent.md §§5–6. No code execution. Add provenance (file, line) and `meta.workbench_commit`. Deterministic ordering and uppercase hex.
+
+**P2 — Swift library generation**  
+Scaffold `swift/Midi2Swift` (SwiftPM). Generate full Swift types for UMP, CI, Profiles, PE from `contract/midi2.json` (no stubs). Add range checks and bit masks. Provide encode/decode and CI reducer.
+
+**P3 — Tests**  
+Implement `GoldenVectorTests` and `CITests` that read `vectors/golden`. Ensure tests compile and pass without external tools. No references to Workbench at runtime.
+
+**P4 — CI**  
+Add GitHub Actions workflow that runs extract-static, verify-contract, and swift test on macOS. Fail on TODO/TBD/unimplemented markers.
+
+---
+
+## 12) Acceptance Checklist
+
+- `contract/midi2.json` present; enums/messages/state_machines populated; provenance set; deterministic.
+- `vectors/golden/*.json` generated for all message classes and CI sequences.
+- Swift library compiles; no stubs; encode/decode & reducers implemented.
+- Tests compile and pass offline.
+- CI green; no TODO/TBD/unimplemented.
+
+---
