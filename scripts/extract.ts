@@ -28,6 +28,29 @@ async function main() {
   );
 
   console.log('Wrote contract/midi2.json');
+
+  const vectorNames = [
+    'ump_channel_voice',
+    'ump_system',
+    'ump_utility_stream',
+    'ci_dialogues',
+    'profiles_pe',
+  ];
+
+  for (const name of vectorNames) {
+    const vector = [
+      {
+        note: `TODO: replace with ${name} data extracted from Workbench runtime`,
+      },
+    ];
+
+    await fs.writeFile(
+      path.join(vectorsDir, `${name}.json`),
+      JSON.stringify(vector, null, 2)
+    );
+  }
+
+  console.log('Wrote placeholder golden vectors');
 }
 
 main().catch((err) => {
