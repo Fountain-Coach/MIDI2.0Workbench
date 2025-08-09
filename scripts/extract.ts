@@ -19,7 +19,7 @@ async function main() {
 
   const contract = {
     generatedAt: new Date().toISOString(),
-    note: 'TODO: replace with data extracted from Workbench runtime',
+    note: 'placeholder contract – integrate with Workbench runtime to populate',
   };
 
   await fs.writeFile(
@@ -28,6 +28,29 @@ async function main() {
   );
 
   console.log('Wrote contract/midi2.json');
+
+  const vectorNames = [
+    'ump_channel_voice',
+    'ump_system',
+    'ump_utility_stream',
+    'ci_dialogues',
+    'profiles_pe',
+  ];
+
+  for (const name of vectorNames) {
+    const vector = [
+      {
+        note: `placeholder for ${name} data – integrate with Workbench runtime to populate`,
+      },
+    ];
+
+    await fs.writeFile(
+      path.join(vectorsDir, `${name}.json`),
+      JSON.stringify(vector, null, 2)
+    );
+  }
+
+  console.log('Wrote placeholder golden vectors');
 }
 
 main().catch((err) => {
