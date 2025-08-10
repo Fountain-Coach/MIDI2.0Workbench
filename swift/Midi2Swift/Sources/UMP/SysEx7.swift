@@ -43,5 +43,16 @@ public struct SysEx7Complete: Equatable {
         let b5 = UInt8(getBits(ump.raw, offset: 57, width: 7))
         return SysEx7Complete(group: group, byteCount: bc, bytes: (b0,b1,b2,b3,b4,b5))
     }
+
+    public static func ==(lhs: SysEx7Complete, rhs: SysEx7Complete) -> Bool {
+        return lhs.group == rhs.group &&
+            lhs.byteCount == rhs.byteCount &&
+            lhs.bytes.0 == rhs.bytes.0 &&
+            lhs.bytes.1 == rhs.bytes.1 &&
+            lhs.bytes.2 == rhs.bytes.2 &&
+            lhs.bytes.3 == rhs.bytes.3 &&
+            lhs.bytes.4 == rhs.bytes.4 &&
+            lhs.bytes.5 == rhs.bytes.5
+    }
 }
 

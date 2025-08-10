@@ -1,5 +1,19 @@
 [
   {
-    "note": "TODO: replace with ump_utility_stream data extracted from Workbench runtime"
+    "name": "MIDIEndpoint.StreamConfigurationRequest",
+    "case": "form0_protocol1",
+    "raw": "0x1014F",
+    "decoded": {
+      "form": 0,
+      "protocol": 1
+    }
+  },
+  {
+    "name": "MIDIEndpoint.StartofSequenceMessage",
+    "case": "form_complete",
+    "raw": "0x80F",
+    "decoded": {
+      "form": 0
+    }
   }
 ]

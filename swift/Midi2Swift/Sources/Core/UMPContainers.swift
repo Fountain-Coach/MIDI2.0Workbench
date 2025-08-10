@@ -56,6 +56,11 @@ public func setBits128(_ rawLo: UInt64, _ rawHi: UInt64, value: UInt64, offset: 
 }
 
 @inline(__always)
+public func setBits128(_ rawLo: UInt64, _ rawHi: UInt64, _ value: UInt64, offset: Int, width: Int) -> (UInt64, UInt64) {
+    return setBits128(rawLo, rawHi, value: value, offset: offset, width: width)
+}
+
+@inline(__always)
 public func getBits128(_ rawLo: UInt64, _ rawHi: UInt64, offset: Int, width: Int) -> UInt64 {
     if offset + width <= 64 {
         return getBits(rawLo, offset: offset, width: width)

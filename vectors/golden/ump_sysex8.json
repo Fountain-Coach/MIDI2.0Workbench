@@ -1,0 +1,19 @@
+[
+  {
+    "name": "SysEx8andMDS.MixedDataSetHeader",
+    "case": "simple",
+    "raw": "0x3040102001012400001000102012805",
+    "decoded": {
+      "group": 0,
+      "bytecount": 2,
+      "mdsid": 1,
+      "numberofvalidbytesinthismessagechunk": 2,
+      "numberofchunksinmixeddataset": 1,
+      "numberofthischunk": 1,
+      "manufacturerid": 4660,
+      "deviceid": 16,
+      "subid1": 258,
+      "subid2": 772
+    }
+  }
+]
