@@ -14,6 +14,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 function readFile(p) {
   return fs.readFileSync(p, 'utf8');
@@ -30,6 +31,45 @@ function isoNow() {
 function toHex(n, width) {
   const s = (BigInt(n) & ((1n << BigInt(width)) - 1n)).toString(16).toUpperCase();
   return '0x' + s;
+}
+
+function gitCommit(root) {
+  try {
+    return execSync('git rev-parse HEAD', { cwd: root }).toString().trim();
+  } catch {
+    return 'unknown';
+  }
+}
+
+function toPascalCase(name) {
+  return name ? name[0].toUpperCase() + name.slice(1) : name;
+}
+
+function extractEnumsFromMessages(messages) {
+  const map = new Map();
+  for (const msg of messages) {
+    for (const f of msg.fields || []) {
+      if (f.value === undefined) continue;
+      const entry = map.get(f.name) || { width: f.bitWidth, values: new Map() };
+      entry.width = Math.max(entry.width, f.bitWidth);
+      const caseName = msg.name.split('.').pop();
+      if (!entry.values.has(f.value)) {
+        entry.values.set(f.value, caseName);
+      }
+      map.set(f.name, entry);
+    }
+  }
+  const enums = {};
+  for (const fieldName of Array.from(map.keys()).sort()) {
+    const { width, values } = map.get(fieldName);
+    const sortedValues = Array.from(values.entries()).sort((a, b) => Number(a[0]) - Number(b[0]));
+    const valsObj = {};
+    for (const [val, caseName] of sortedValues) {
+      valsObj[caseName] = Number(val);
+    }
+    enums[toPascalCase(fieldName)] = { type: `uint${width}`, values: valsObj };
+  }
+  return enums;
 }
 
 function walkBalanced(src, startIdx, openChar, closeChar) {
@@ -325,17 +365,22 @@ function main() {
   const src = readFile(messageTypesPath);
 
   const messages = parseAllFromMessageTypes(src, messageTypesPath);
-  const enums = parseSpecEnums(workbenchRoot);
+  messages.sort((a, b) => a.name.localeCompare(b.name));
+  const enums = extractEnumsFromMessages(messages);
+  const stateMachines = parseCIStateMachines(workbenchRoot).sort((a, b) => a.name.localeCompare(b.name));
+  const profiles = parseProfiles(workbenchRoot).sort((a, b) =>
+    a.bank - b.bank || a.index - b.index || a.name.localeCompare(b.name));
+  const peSchemas = parsePESchemas(workbenchRoot).sort((a, b) => a.id.localeCompare(b.id));
 
   const contract = {
     $schema: 'https://fountain.example/schemas/midi2-contract.schema.json',
-    meta: { workbench_commit: 'unknown', generated_at: isoNow() },
+    meta: { workbench_commit: gitCommit(workbenchRoot), generated_at: isoNow() },
     enums,
     messages,
-    state_machines: parseCIStateMachines(workbenchRoot),
+    state_machines: stateMachines,
     resources: {
-      Profiles: parseProfiles(workbenchRoot),
-      PropertyExchange: { schemas: parsePESchemas(workbenchRoot) }
+      Profiles: profiles,
+      PropertyExchange: { schemas: peSchemas }
     },
   };
 

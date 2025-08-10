@@ -1,2150 +1,6 @@
 [
   {
-    "name": "UtilityMessages.NOOP",
-    "case": "group_min",
-    "raw": "0x0",
-    "decoded": {
-      "messageType": 0,
-      "group": 0,
-      "statusCode": 0
-    }
-  },
-  {
-    "name": "UtilityMessages.NOOP",
-    "case": "group_max",
-    "raw": "0xF0",
-    "decoded": {
-      "messageType": 0,
-      "group": 15,
-      "statusCode": 0
-    }
-  },
-  {
-    "name": "UtilityMessages.JRClock",
-    "case": "group_min",
-    "raw": "0x100",
-    "decoded": {
-      "messageType": 0,
-      "group": 0,
-      "statusCode": 1
-    }
-  },
-  {
-    "name": "UtilityMessages.JRClock",
-    "case": "group_max",
-    "raw": "0x1F0",
-    "decoded": {
-      "messageType": 0,
-      "group": 15,
-      "statusCode": 1
-    }
-  },
-  {
-    "name": "UtilityMessages.JRTimestamp",
-    "case": "group_min",
-    "raw": "0x200",
-    "decoded": {
-      "messageType": 0,
-      "group": 0,
-      "statusCode": 2
-    }
-  },
-  {
-    "name": "UtilityMessages.JRTimestamp",
-    "case": "group_max",
-    "raw": "0x2F0",
-    "decoded": {
-      "messageType": 0,
-      "group": 15,
-      "statusCode": 2
-    }
-  },
-  {
-    "name": "UtilityMessages.DeltaClockstampTicksPerQuarterNote",
-    "case": "group_min",
-    "raw": "0x300",
-    "decoded": {
-      "messageType": 0,
-      "group": 0,
-      "statusCode": 3
-    }
-  },
-  {
-    "name": "UtilityMessages.DeltaClockstampTicksPerQuarterNote",
-    "case": "group_max",
-    "raw": "0x3F0",
-    "decoded": {
-      "messageType": 0,
-      "group": 15,
-      "statusCode": 3
-    }
-  },
-  {
-    "name": "UtilityMessages.DeltaClockstamp",
-    "case": "group_min",
-    "raw": "0x400",
-    "decoded": {
-      "messageType": 0,
-      "group": 0,
-      "statusCode": 4
-    }
-  },
-  {
-    "name": "UtilityMessages.DeltaClockstamp",
-    "case": "group_max",
-    "raw": "0x4F0",
-    "decoded": {
-      "messageType": 0,
-      "group": 15,
-      "statusCode": 4
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.MIDITimeCode",
-    "case": "group_min",
-    "raw": "0xF101",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 241,
-      "nnndddd": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.MIDITimeCode",
-    "case": "group_max",
-    "raw": "0xF1F1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 241,
-      "nnndddd": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.MIDITimeCode",
-    "case": "nnndddd_min",
-    "raw": "0xF101",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 241,
-      "nnndddd": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.MIDITimeCode",
-    "case": "nnndddd_max",
-    "raw": "0xFEF101",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 241,
-      "nnndddd": 127
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.SongPositionPointer",
-    "case": "group_min",
-    "raw": "0xF201",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 242,
-      "lllllll": 0,
-      "mmmmmmm": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.SongPositionPointer",
-    "case": "group_max",
-    "raw": "0xF2F1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 242,
-      "lllllll": 0,
-      "mmmmmmm": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.SongPositionPointer",
-    "case": "lllllll_min",
-    "raw": "0xF201",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 242,
-      "lllllll": 0,
-      "mmmmmmm": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.SongPositionPointer",
-    "case": "lllllll_max",
-    "raw": "0xFEF201",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 242,
-      "lllllll": 127,
-      "mmmmmmm": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.SongSelect",
-    "case": "group_min",
-    "raw": "0xF301",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 243,
-      "sssssss": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.SongSelect",
-    "case": "group_max",
-    "raw": "0xF3F1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 243,
-      "sssssss": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.SongSelect",
-    "case": "sssssss_min",
-    "raw": "0xF301",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 243,
-      "sssssss": 0
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.SongSelect",
-    "case": "sssssss_max",
-    "raw": "0xFEF301",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 243,
-      "sssssss": 127
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.TuneRequest",
-    "case": "group_min",
-    "raw": "0xF601",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 246
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.TuneRequest",
-    "case": "group_max",
-    "raw": "0xF6F1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 246
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.TimingClock",
-    "case": "group_min",
-    "raw": "0xF801",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 248
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.TimingClock",
-    "case": "group_max",
-    "raw": "0xF8F1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 248
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.Start",
-    "case": "group_min",
-    "raw": "0xFA01",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 250
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.Start",
-    "case": "group_max",
-    "raw": "0xFAF1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 250
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.Continue",
-    "case": "group_min",
-    "raw": "0xFB01",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 251
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.Continue",
-    "case": "group_max",
-    "raw": "0xFBF1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 251
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.Stop",
-    "case": "group_min",
-    "raw": "0xFC01",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 252
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.Stop",
-    "case": "group_max",
-    "raw": "0xFCF1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 252
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.ActiveSensing",
-    "case": "group_min",
-    "raw": "0xFE01",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 254
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.ActiveSensing",
-    "case": "group_max",
-    "raw": "0xFEF1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 254
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.Reset",
-    "case": "group_min",
-    "raw": "0xFF01",
-    "decoded": {
-      "messageType": 1,
-      "group": 0,
-      "statusByte": 255
-    }
-  },
-  {
-    "name": "SystemRealTimeandSystemCommonMessages.Reset",
-    "case": "group_max",
-    "raw": "0xFFF1",
-    "decoded": {
-      "messageType": 1,
-      "group": 15,
-      "statusByte": 255
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.NoteOff",
-    "case": "group_min",
-    "raw": "0x802",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 8,
-      "channel": 0,
-      "noteNumber": 0,
-      "velocity": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.NoteOff",
-    "case": "group_max",
-    "raw": "0x8F2",
-    "decoded": {
-      "messageType": 2,
-      "group": 15,
-      "statusNibble": 8,
-      "channel": 0,
-      "noteNumber": 0,
-      "velocity": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.NoteOff",
-    "case": "channel_min",
-    "raw": "0x802",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 8,
-      "channel": 0,
-      "noteNumber": 0,
-      "velocity": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.NoteOff",
-    "case": "channel_max",
-    "raw": "0xF802",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 8,
-      "channel": 15,
-      "noteNumber": 0,
-      "velocity": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.NoteOn",
-    "case": "group_min",
-    "raw": "0x902",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 9,
-      "channel": 0,
-      "noteNumber": 0,
-      "velocity": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.NoteOn",
-    "case": "group_max",
-    "raw": "0x9F2",
-    "decoded": {
-      "messageType": 2,
-      "group": 15,
-      "statusNibble": 9,
-      "channel": 0,
-      "noteNumber": 0,
-      "velocity": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.NoteOn",
-    "case": "channel_min",
-    "raw": "0x902",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 9,
-      "channel": 0,
-      "noteNumber": 0,
-      "velocity": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.NoteOn",
-    "case": "channel_max",
-    "raw": "0xF902",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 9,
-      "channel": 15,
-      "noteNumber": 0,
-      "velocity": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.PolyPressure",
-    "case": "group_min",
-    "raw": "0xA02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 10,
-      "channel": 0,
-      "noteNumber": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.PolyPressure",
-    "case": "group_max",
-    "raw": "0xAF2",
-    "decoded": {
-      "messageType": 2,
-      "group": 15,
-      "statusNibble": 10,
-      "channel": 0,
-      "noteNumber": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.PolyPressure",
-    "case": "channel_min",
-    "raw": "0xA02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 10,
-      "channel": 0,
-      "noteNumber": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.PolyPressure",
-    "case": "channel_max",
-    "raw": "0xFA02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 10,
-      "channel": 15,
-      "noteNumber": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ControlChangeMessage",
-    "case": "group_min",
-    "raw": "0xB02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 11,
-      "channel": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ControlChangeMessage",
-    "case": "group_max",
-    "raw": "0xBF2",
-    "decoded": {
-      "messageType": 2,
-      "group": 15,
-      "statusNibble": 11,
-      "channel": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ControlChangeMessage",
-    "case": "channel_min",
-    "raw": "0xB02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 11,
-      "channel": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ControlChangeMessage",
-    "case": "channel_max",
-    "raw": "0xFB02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 11,
-      "channel": 15,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ProgramChangeMessage",
-    "case": "group_min",
-    "raw": "0xC02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 12,
-      "channel": 0,
-      "program": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ProgramChangeMessage",
-    "case": "group_max",
-    "raw": "0xCF2",
-    "decoded": {
-      "messageType": 2,
-      "group": 15,
-      "statusNibble": 12,
-      "channel": 0,
-      "program": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ProgramChangeMessage",
-    "case": "channel_min",
-    "raw": "0xC02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 12,
-      "channel": 0,
-      "program": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ProgramChangeMessage",
-    "case": "channel_max",
-    "raw": "0xFC02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 12,
-      "channel": 15,
-      "program": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ChannelPressureMessage",
-    "case": "group_min",
-    "raw": "0xD02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 13,
-      "channel": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ChannelPressureMessage",
-    "case": "group_max",
-    "raw": "0xDF2",
-    "decoded": {
-      "messageType": 2,
-      "group": 15,
-      "statusNibble": 13,
-      "channel": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ChannelPressureMessage",
-    "case": "channel_min",
-    "raw": "0xD02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 13,
-      "channel": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.ChannelPressureMessage",
-    "case": "channel_max",
-    "raw": "0xFD02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 13,
-      "channel": 15,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.PitchBend",
-    "case": "group_min",
-    "raw": "0xE02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 14,
-      "channel": 0,
-      "LSBdata": 0,
-      "MSBdata": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.PitchBend",
-    "case": "group_max",
-    "raw": "0xEF2",
-    "decoded": {
-      "messageType": 2,
-      "group": 15,
-      "statusNibble": 14,
-      "channel": 0,
-      "LSBdata": 0,
-      "MSBdata": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.PitchBend",
-    "case": "channel_min",
-    "raw": "0xE02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 14,
-      "channel": 0,
-      "LSBdata": 0,
-      "MSBdata": 0
-    }
-  },
-  {
-    "name": "MIDI10ChannelVoiceMessages.PitchBend",
-    "case": "channel_max",
-    "raw": "0xFE02",
-    "decoded": {
-      "messageType": 2,
-      "group": 0,
-      "statusNibble": 14,
-      "channel": 15,
-      "LSBdata": 0,
-      "MSBdata": 0
-    }
-  },
-  {
-    "name": "SysEx.CompleteSystemExclusiveMessageinOnePacket",
-    "case": "group_min",
-    "raw": "0x3",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 0,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.CompleteSystemExclusiveMessageinOnePacket",
-    "case": "group_max",
-    "raw": "0xF3",
-    "decoded": {
-      "messageType": 3,
-      "group": 15,
-      "sysexForm": 0,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.CompleteSystemExclusiveMessageinOnePacket",
-    "case": "byteCount_min",
-    "raw": "0x3",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 0,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.CompleteSystemExclusiveMessageinOnePacket",
-    "case": "byteCount_max",
-    "raw": "0xF003",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 0,
-      "byteCount": 15,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveStartPacket",
-    "case": "group_min",
-    "raw": "0x103",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 1,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveStartPacket",
-    "case": "group_max",
-    "raw": "0x1F3",
-    "decoded": {
-      "messageType": 3,
-      "group": 15,
-      "sysexForm": 1,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveStartPacket",
-    "case": "byteCount_min",
-    "raw": "0x103",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 1,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveStartPacket",
-    "case": "byteCount_max",
-    "raw": "0xF103",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 1,
-      "byteCount": 15,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveContinuePacket",
-    "case": "group_min",
-    "raw": "0x203",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 2,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveContinuePacket",
-    "case": "group_max",
-    "raw": "0x2F3",
-    "decoded": {
-      "messageType": 3,
-      "group": 15,
-      "sysexForm": 2,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveContinuePacket",
-    "case": "byteCount_min",
-    "raw": "0x203",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 2,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveContinuePacket",
-    "case": "byteCount_max",
-    "raw": "0xF203",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 2,
-      "byteCount": 15,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveEndPacket",
-    "case": "group_min",
-    "raw": "0x303",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 3,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveEndPacket",
-    "case": "group_max",
-    "raw": "0x3F3",
-    "decoded": {
-      "messageType": 3,
-      "group": 15,
-      "sysexForm": 3,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveEndPacket",
-    "case": "byteCount_min",
-    "raw": "0x303",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 3,
-      "byteCount": 0,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "SysEx.SystemExclusiveEndPacket",
-    "case": "byteCount_max",
-    "raw": "0xF303",
-    "decoded": {
-      "messageType": 3,
-      "group": 0,
-      "sysexForm": 3,
-      "byteCount": 15,
-      "Byte1": 0,
-      "Byte2": 0,
-      "Byte3": 0,
-      "Byte4": 0,
-      "Byte5": 0,
-      "Byte6": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.NoteOff",
-    "case": "group_min",
-    "raw": "0x804",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 8,
-      "channel": 0,
-      "noteNumber": 0,
-      "attributeType": 0,
-      "velocity": 0,
-      "attribute": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.NoteOff",
-    "case": "group_max",
-    "raw": "0x8F4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 8,
-      "channel": 0,
-      "noteNumber": 0,
-      "attributeType": 0,
-      "velocity": 0,
-      "attribute": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.NoteOff",
-    "case": "channel_min",
-    "raw": "0x804",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 8,
-      "channel": 0,
-      "noteNumber": 0,
-      "attributeType": 0,
-      "velocity": 0,
-      "attribute": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.NoteOff",
-    "case": "channel_max",
-    "raw": "0xF804",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 8,
-      "channel": 15,
-      "noteNumber": 0,
-      "attributeType": 0,
-      "velocity": 0,
-      "attribute": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.NoteOn",
-    "case": "group_min",
-    "raw": "0x904",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 9,
-      "channel": 0,
-      "noteNumber": 0,
-      "attributeType": 0,
-      "velocity": 0,
-      "attribute": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.NoteOn",
-    "case": "group_max",
-    "raw": "0x9F4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 9,
-      "channel": 0,
-      "noteNumber": 0,
-      "attributeType": 0,
-      "velocity": 0,
-      "attribute": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.NoteOn",
-    "case": "channel_min",
-    "raw": "0x904",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 9,
-      "channel": 0,
-      "noteNumber": 0,
-      "attributeType": 0,
-      "velocity": 0,
-      "attribute": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.NoteOn",
-    "case": "channel_max",
-    "raw": "0xF904",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 9,
-      "channel": 15,
-      "noteNumber": 0,
-      "attributeType": 0,
-      "velocity": 0,
-      "attribute": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PolyPressure",
-    "case": "group_min",
-    "raw": "0xA04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 10,
-      "channel": 0,
-      "noteNumber": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PolyPressure",
-    "case": "group_max",
-    "raw": "0xAF4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 10,
-      "channel": 0,
-      "noteNumber": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PolyPressure",
-    "case": "channel_min",
-    "raw": "0xA04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 10,
-      "channel": 0,
-      "noteNumber": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PolyPressure",
-    "case": "channel_max",
-    "raw": "0xFA04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 10,
-      "channel": 15,
-      "noteNumber": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ControlChangeMessage",
-    "case": "group_min",
-    "raw": "0xB04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 11,
-      "channel": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ControlChangeMessage",
-    "case": "group_max",
-    "raw": "0xBF4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 11,
-      "channel": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ControlChangeMessage",
-    "case": "channel_min",
-    "raw": "0xB04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 11,
-      "channel": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ControlChangeMessage",
-    "case": "channel_max",
-    "raw": "0xFB04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 11,
-      "channel": 15,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RegisteredControllerRPN",
-    "case": "group_min",
-    "raw": "0x204",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 2,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RegisteredControllerRPN",
-    "case": "group_max",
-    "raw": "0x2F4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 2,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RegisteredControllerRPN",
-    "case": "channel_min",
-    "raw": "0x204",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 2,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RegisteredControllerRPN",
-    "case": "channel_max",
-    "raw": "0xF204",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 2,
-      "channel": 15,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.AssignableControllerNRPNMessages",
-    "case": "group_min",
-    "raw": "0x304",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 3,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.AssignableControllerNRPNMessages",
-    "case": "group_max",
-    "raw": "0x3F4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 3,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.AssignableControllerNRPNMessages",
-    "case": "channel_min",
-    "raw": "0x304",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 3,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.AssignableControllerNRPNMessages",
-    "case": "channel_max",
-    "raw": "0xF304",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 3,
-      "channel": 15,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RelativeRegisteredControllerRPN",
-    "case": "group_min",
-    "raw": "0x404",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 4,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RelativeRegisteredControllerRPN",
-    "case": "group_max",
-    "raw": "0x4F4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 4,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RelativeRegisteredControllerRPN",
-    "case": "channel_min",
-    "raw": "0x404",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 4,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RelativeRegisteredControllerRPN",
-    "case": "channel_max",
-    "raw": "0xF404",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 4,
-      "channel": 15,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RelativeAssignableControllerNRPN",
-    "case": "group_min",
-    "raw": "0x504",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 5,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RelativeAssignableControllerNRPN",
-    "case": "group_max",
-    "raw": "0x5F4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 5,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RelativeAssignableControllerNRPN",
-    "case": "channel_min",
-    "raw": "0x504",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 5,
-      "channel": 0,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RelativeAssignableControllerNRPN",
-    "case": "channel_max",
-    "raw": "0xF504",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 5,
-      "channel": 15,
-      "Bank": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ProgramChangeMessage",
-    "case": "group_min",
-    "raw": "0xC04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 12,
-      "channel": 0,
-      "bankValid": 0,
-      "program": 0,
-      "BankMSB": 0,
-      "BankLSB": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ProgramChangeMessage",
-    "case": "group_max",
-    "raw": "0xCF4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 12,
-      "channel": 0,
-      "bankValid": 0,
-      "program": 0,
-      "BankMSB": 0,
-      "BankLSB": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ProgramChangeMessage",
-    "case": "channel_min",
-    "raw": "0xC04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 12,
-      "channel": 0,
-      "bankValid": 0,
-      "program": 0,
-      "BankMSB": 0,
-      "BankLSB": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ProgramChangeMessage",
-    "case": "channel_max",
-    "raw": "0xFC04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 12,
-      "channel": 15,
-      "bankValid": 0,
-      "program": 0,
-      "BankMSB": 0,
-      "BankLSB": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ChannelPressureMessage",
-    "case": "group_min",
-    "raw": "0xD04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 13,
-      "channel": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ChannelPressureMessage",
-    "case": "group_max",
-    "raw": "0xDF4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 13,
-      "channel": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ChannelPressureMessage",
-    "case": "channel_min",
-    "raw": "0xD04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 13,
-      "channel": 0,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.ChannelPressureMessage",
-    "case": "channel_max",
-    "raw": "0xFD04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 13,
-      "channel": 15,
-      "Pressure": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PitchBend",
-    "case": "group_min",
-    "raw": "0xE04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 14,
-      "channel": 0,
-      "pitch": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PitchBend",
-    "case": "group_max",
-    "raw": "0xEF4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 14,
-      "channel": 0,
-      "pitch": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PitchBend",
-    "case": "channel_min",
-    "raw": "0xE04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 14,
-      "channel": 0,
-      "pitch": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PitchBend",
-    "case": "channel_max",
-    "raw": "0xFE04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 14,
-      "channel": 15,
-      "pitch": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PerNotePitchBend",
-    "case": "group_min",
-    "raw": "0x604",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 6,
-      "channel": 0,
-      "noteNumber": 0,
-      "pitch": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PerNotePitchBend",
-    "case": "group_max",
-    "raw": "0x6F4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 6,
-      "channel": 0,
-      "noteNumber": 0,
-      "pitch": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PerNotePitchBend",
-    "case": "channel_min",
-    "raw": "0x604",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 6,
-      "channel": 0,
-      "noteNumber": 0,
-      "pitch": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PerNotePitchBend",
-    "case": "channel_max",
-    "raw": "0xF604",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 6,
-      "channel": 15,
-      "noteNumber": 0,
-      "pitch": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.AssignablePerNoteController",
-    "case": "group_min",
-    "raw": "0x104",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 1,
-      "channel": 0,
-      "noteNumber": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.AssignablePerNoteController",
-    "case": "group_max",
-    "raw": "0x1F4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 1,
-      "channel": 0,
-      "noteNumber": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.AssignablePerNoteController",
-    "case": "channel_min",
-    "raw": "0x104",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 1,
-      "channel": 0,
-      "noteNumber": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.AssignablePerNoteController",
-    "case": "channel_max",
-    "raw": "0xF104",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 1,
-      "channel": 15,
-      "noteNumber": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RegisteredPerNoteController",
-    "case": "group_min",
-    "raw": "0x4",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 0,
-      "channel": 0,
-      "noteNumber": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RegisteredPerNoteController",
-    "case": "group_max",
-    "raw": "0xF4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 0,
-      "channel": 0,
-      "noteNumber": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RegisteredPerNoteController",
-    "case": "channel_min",
-    "raw": "0x4",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 0,
-      "channel": 0,
-      "noteNumber": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.RegisteredPerNoteController",
-    "case": "channel_max",
-    "raw": "0xF004",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 0,
-      "channel": 15,
-      "noteNumber": 0,
-      "index": 0,
-      "value": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PerNoteManagementMessage",
-    "case": "group_min",
-    "raw": "0xF04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 15,
-      "channel": 0,
-      "noteNumber": 0,
-      "DetachPerNotecontrollersfrompreviouslyreceivedNotes": 0,
-      "ResetSetPerNotecontrollerstodefaultvalues": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PerNoteManagementMessage",
-    "case": "group_max",
-    "raw": "0xFF4",
-    "decoded": {
-      "messageType": 4,
-      "group": 15,
-      "statusNibble": 15,
-      "channel": 0,
-      "noteNumber": 0,
-      "DetachPerNotecontrollersfrompreviouslyreceivedNotes": 0,
-      "ResetSetPerNotecontrollerstodefaultvalues": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PerNoteManagementMessage",
-    "case": "channel_min",
-    "raw": "0xF04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 15,
-      "channel": 0,
-      "noteNumber": 0,
-      "DetachPerNotecontrollersfrompreviouslyreceivedNotes": 0,
-      "ResetSetPerNotecontrollerstodefaultvalues": 0
-    }
-  },
-  {
-    "name": "MIDI20ChannelVoiceMessages.PerNoteManagementMessage",
-    "case": "channel_max",
-    "raw": "0xFF04",
-    "decoded": {
-      "messageType": 4,
-      "group": 0,
-      "statusNibble": 15,
-      "channel": 15,
-      "noteNumber": 0,
-      "DetachPerNotecontrollersfrompreviouslyreceivedNotes": 0,
-      "ResetSetPerNotecontrollerstodefaultvalues": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.CompleteSystemExclusive8MessageinOnePacket",
-    "case": "group_min",
-    "raw": "0x5",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 0,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.CompleteSystemExclusive8MessageinOnePacket",
-    "case": "group_max",
-    "raw": "0xF5",
-    "decoded": {
-      "messageType": 5,
-      "group": 15,
-      "sysex8Form": 0,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.CompleteSystemExclusive8MessageinOnePacket",
-    "case": "byteCount_min",
-    "raw": "0x5",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 0,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.CompleteSystemExclusive8MessageinOnePacket",
-    "case": "byteCount_max",
-    "raw": "0xF005",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 0,
-      "byteCount": 15,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusive8StartPacket",
-    "case": "group_min",
-    "raw": "0x105",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 1,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusive8StartPacket",
-    "case": "group_max",
-    "raw": "0x1F5",
-    "decoded": {
-      "messageType": 5,
-      "group": 15,
-      "sysex8Form": 1,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusive8StartPacket",
-    "case": "byteCount_min",
-    "raw": "0x105",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 1,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusive8StartPacket",
-    "case": "byteCount_max",
-    "raw": "0xF105",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 1,
-      "byteCount": 15,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusive8ContinuePacket",
-    "case": "group_min",
-    "raw": "0x205",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 2,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusive8ContinuePacket",
-    "case": "group_max",
-    "raw": "0x2F5",
-    "decoded": {
-      "messageType": 5,
-      "group": 15,
-      "sysex8Form": 2,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusive8ContinuePacket",
-    "case": "byteCount_min",
-    "raw": "0x205",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 2,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusive8ContinuePacket",
-    "case": "byteCount_max",
-    "raw": "0xF205",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 2,
-      "byteCount": 15,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusiveEndPacket",
-    "case": "group_min",
-    "raw": "0x305",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 3,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusiveEndPacket",
-    "case": "group_max",
-    "raw": "0x3F5",
-    "decoded": {
-      "messageType": 5,
-      "group": 15,
-      "sysex8Form": 3,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusiveEndPacket",
-    "case": "byteCount_min",
-    "raw": "0x305",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 3,
-      "byteCount": 0,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.SystemExclusiveEndPacket",
-    "case": "byteCount_max",
-    "raw": "0xF305",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 3,
-      "byteCount": 15,
-      "streamid": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.MixedDataSetHeader",
-    "case": "group_min",
-    "raw": "0x805",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 8,
-      "byteCount": 0,
-      "mdsId": 0,
-      "numberofvalidbytesinthismessagechunk": 0,
-      "numberofchunksinmixeddataset": 0,
-      "numberofthischunk": 0,
-      "manufacturerid": 0,
-      "deviceid": 0,
-      "subid1": 0,
-      "subid2": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.MixedDataSetHeader",
-    "case": "group_max",
-    "raw": "0x8F5",
-    "decoded": {
-      "messageType": 5,
-      "group": 15,
-      "sysex8Form": 8,
-      "byteCount": 0,
-      "mdsId": 0,
-      "numberofvalidbytesinthismessagechunk": 0,
-      "numberofchunksinmixeddataset": 0,
-      "numberofthischunk": 0,
-      "manufacturerid": 0,
-      "deviceid": 0,
-      "subid1": 0,
-      "subid2": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.MixedDataSetHeader",
-    "case": "byteCount_min",
-    "raw": "0x805",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 8,
-      "byteCount": 0,
-      "mdsId": 0,
-      "numberofvalidbytesinthismessagechunk": 0,
-      "numberofchunksinmixeddataset": 0,
-      "numberofthischunk": 0,
-      "manufacturerid": 0,
-      "deviceid": 0,
-      "subid1": 0,
-      "subid2": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.MixedDataSetHeader",
-    "case": "byteCount_max",
-    "raw": "0xF805",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 8,
-      "byteCount": 15,
-      "mdsId": 0,
-      "numberofvalidbytesinthismessagechunk": 0,
-      "numberofchunksinmixeddataset": 0,
-      "numberofthischunk": 0,
-      "manufacturerid": 0,
-      "deviceid": 0,
-      "subid1": 0,
-      "subid2": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.MixedDataSetPayload",
-    "case": "group_min",
-    "raw": "0x905",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 9,
-      "byteCount": 0,
-      "mdsId": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.MixedDataSetPayload",
-    "case": "group_max",
-    "raw": "0x9F5",
-    "decoded": {
-      "messageType": 5,
-      "group": 15,
-      "sysex8Form": 9,
-      "byteCount": 0,
-      "mdsId": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.MixedDataSetPayload",
-    "case": "byteCount_min",
-    "raw": "0x905",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 9,
-      "byteCount": 0,
-      "mdsId": 0
-    }
-  },
-  {
-    "name": "SysEx8andMDS.MixedDataSetPayload",
-    "case": "byteCount_max",
-    "raw": "0xF905",
-    "decoded": {
-      "messageType": 5,
-      "group": 0,
-      "sysex8Form": 9,
-      "byteCount": 15,
-      "mdsId": 0
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
+    "name": "FlexDataMessages.FlexDataMessages0x0",
     "case": "channel_min",
     "raw": "0xD",
     "decoded": {
@@ -2152,12 +8,11 @@
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 0
+      "statusMSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
+    "name": "FlexDataMessages.FlexDataMessages0x0",
     "case": "channel_max",
     "raw": "0xFD",
     "decoded": {
@@ -2165,12 +20,11 @@
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 0
+      "statusMSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
+    "name": "FlexDataMessages.FlexDataMessages0x0",
     "case": "group_min",
     "raw": "0xD",
     "decoded": {
@@ -2178,12 +32,11 @@
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 0
+      "statusMSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
+    "name": "FlexDataMessages.FlexDataMessages0x0",
     "case": "group_max",
     "raw": "0xF0D",
     "decoded": {
@@ -2191,224 +44,55 @@
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 0
+      "statusMSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
+    "name": "FlexDataMessages.FlexDataMessages0x0",
     "case": "channel_min",
-    "raw": "0x100000D",
+    "raw": "0xD",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 1
+      "statusMSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
+    "name": "FlexDataMessages.FlexDataMessages0x0",
     "case": "channel_max",
-    "raw": "0x10000FD",
+    "raw": "0xFD",
     "decoded": {
       "messageType": 13,
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 1
+      "statusMSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
+    "name": "FlexDataMessages.FlexDataMessages0x0",
     "case": "group_min",
-    "raw": "0x100000D",
+    "raw": "0xD",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 1
+      "statusMSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
+    "name": "FlexDataMessages.FlexDataMessages0x0",
     "case": "group_max",
-    "raw": "0x1000F0D",
+    "raw": "0xF0D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 1
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
-    "case": "channel_min",
-    "raw": "0x200000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 2,
-      "SubdivisionClicks1": 0,
-      "SubdivisionClicks2": 0
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
-    "case": "channel_max",
-    "raw": "0x20000FD",
-    "decoded": {
-      "messageType": 13,
-      "channel": 15,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 2,
-      "SubdivisionClicks1": 0,
-      "SubdivisionClicks2": 0
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
-    "case": "group_min",
-    "raw": "0x200000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 2,
-      "SubdivisionClicks1": 0,
-      "SubdivisionClicks2": 0
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
-    "case": "group_max",
-    "raw": "0x2000F0D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 15,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 2,
-      "SubdivisionClicks1": 0,
-      "SubdivisionClicks2": 0
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x5",
-    "case": "channel_min",
-    "raw": "0x500000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 5
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x5",
-    "case": "channel_max",
-    "raw": "0x50000FD",
-    "decoded": {
-      "messageType": 13,
-      "channel": 15,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 5
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x5",
-    "case": "group_min",
-    "raw": "0x500000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 5
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x5",
-    "case": "group_max",
-    "raw": "0x5000F0D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 15,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 5
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x6",
-    "case": "channel_min",
-    "raw": "0x600000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 6
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x6",
-    "case": "channel_max",
-    "raw": "0x60000FD",
-    "decoded": {
-      "messageType": 13,
-      "channel": 15,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 6
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x6",
-    "case": "group_min",
-    "raw": "0x600000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 6
-    }
-  },
-  {
-    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x6",
-    "case": "group_max",
-    "raw": "0x6000F0D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 15,
-      "form": 0,
-      "statusMSB": 0,
-      "statusLSB": 6
+      "statusMSB": 0
     }
   },
   {
@@ -2508,155 +192,99 @@
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1",
+    "name": "FlexDataMessages.FlexDataMessages0x1",
     "case": "channel_min",
-    "raw": "0x2000D",
+    "raw": "0x1000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 2,
-      "SubdivisionClicks1": 0,
-      "SubdivisionClicks2": 0
+      "statusMSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1",
+    "name": "FlexDataMessages.FlexDataMessages0x1",
     "case": "channel_max",
-    "raw": "0x200FD",
+    "raw": "0x100FD",
     "decoded": {
       "messageType": 13,
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 2,
-      "SubdivisionClicks1": 0,
-      "SubdivisionClicks2": 0
+      "statusMSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1",
+    "name": "FlexDataMessages.FlexDataMessages0x1",
     "case": "group_min",
-    "raw": "0x2000D",
+    "raw": "0x1000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 2,
-      "SubdivisionClicks1": 0,
-      "SubdivisionClicks2": 0
+      "statusMSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.SubdivisionClicks1",
+    "name": "FlexDataMessages.FlexDataMessages0x1",
     "case": "group_max",
-    "raw": "0x20F0D",
+    "raw": "0x10F0D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 2,
-      "SubdivisionClicks1": 0,
-      "SubdivisionClicks2": 0
+      "statusMSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x5",
+    "name": "FlexDataMessages.FlexDataMessages0x1",
     "case": "channel_min",
-    "raw": "0x5000D",
+    "raw": "0x1000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 5
+      "statusMSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x5",
+    "name": "FlexDataMessages.FlexDataMessages0x1",
     "case": "channel_max",
-    "raw": "0x500FD",
+    "raw": "0x100FD",
     "decoded": {
       "messageType": 13,
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 5
+      "statusMSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x5",
+    "name": "FlexDataMessages.FlexDataMessages0x1",
     "case": "group_min",
-    "raw": "0x5000D",
+    "raw": "0x1000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 5
+      "statusMSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x5",
+    "name": "FlexDataMessages.FlexDataMessages0x1",
     "case": "group_max",
-    "raw": "0x50F0D",
+    "raw": "0x10F0D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 5
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x6",
-    "case": "channel_min",
-    "raw": "0x6000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 6
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x6",
-    "case": "channel_max",
-    "raw": "0x600FD",
-    "decoded": {
-      "messageType": 13,
-      "channel": 15,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 6
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x6",
-    "case": "group_min",
-    "raw": "0x6000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 6
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x6",
-    "case": "group_max",
-    "raw": "0x60F0D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 15,
-      "form": 0,
-      "statusMSB": 6
+      "statusMSB": 1
     }
   },
   {
@@ -3336,99 +964,51 @@
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x0",
+    "name": "FlexDataMessages.FlexDataMessages0x2",
     "case": "channel_min",
-    "raw": "0xD",
+    "raw": "0x2000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 0
+      "statusMSB": 2
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x0",
+    "name": "FlexDataMessages.FlexDataMessages0x2",
     "case": "channel_max",
-    "raw": "0xFD",
+    "raw": "0x200FD",
     "decoded": {
       "messageType": 13,
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 0
+      "statusMSB": 2
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x0",
+    "name": "FlexDataMessages.FlexDataMessages0x2",
     "case": "group_min",
-    "raw": "0xD",
+    "raw": "0x2000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 0
+      "statusMSB": 2
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x0",
+    "name": "FlexDataMessages.FlexDataMessages0x2",
     "case": "group_max",
-    "raw": "0xF0D",
+    "raw": "0x20F0D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 0
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x1",
-    "case": "channel_min",
-    "raw": "0x1000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 1
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x1",
-    "case": "channel_max",
-    "raw": "0x100FD",
-    "decoded": {
-      "messageType": 13,
-      "channel": 15,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 1
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x1",
-    "case": "group_min",
-    "raw": "0x1000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 1
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x1",
-    "case": "group_max",
-    "raw": "0x10F0D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 15,
-      "form": 0,
-      "statusMSB": 1
+      "statusMSB": 2
     }
   },
   {
@@ -3477,6 +1057,314 @@
       "group": 15,
       "form": 0,
       "statusMSB": 2
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x0",
+    "case": "channel_min",
+    "raw": "0x2000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x0",
+    "case": "channel_max",
+    "raw": "0x200FD",
+    "decoded": {
+      "messageType": 13,
+      "channel": 15,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x0",
+    "case": "group_min",
+    "raw": "0x2000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x0",
+    "case": "group_max",
+    "raw": "0x20F0D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 15,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x1",
+    "case": "channel_min",
+    "raw": "0x102000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 1
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x1",
+    "case": "channel_max",
+    "raw": "0x10200FD",
+    "decoded": {
+      "messageType": 13,
+      "channel": 15,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 1
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x1",
+    "case": "group_min",
+    "raw": "0x102000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 1
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x1",
+    "case": "group_max",
+    "raw": "0x1020F0D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 15,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 1
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x2",
+    "case": "channel_min",
+    "raw": "0x202000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 2
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x2",
+    "case": "channel_max",
+    "raw": "0x20200FD",
+    "decoded": {
+      "messageType": 13,
+      "channel": 15,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 2
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x2",
+    "case": "group_min",
+    "raw": "0x202000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 2
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x2",
+    "case": "group_max",
+    "raw": "0x2020F0D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 15,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 2
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x3",
+    "case": "channel_min",
+    "raw": "0x302000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 3
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x3",
+    "case": "channel_max",
+    "raw": "0x30200FD",
+    "decoded": {
+      "messageType": 13,
+      "channel": 15,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 3
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x3",
+    "case": "group_min",
+    "raw": "0x302000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 3
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x3",
+    "case": "group_max",
+    "raw": "0x3020F0D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 15,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 3
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x4",
+    "case": "channel_min",
+    "raw": "0x402000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 4
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x4",
+    "case": "channel_max",
+    "raw": "0x40200FD",
+    "decoded": {
+      "messageType": 13,
+      "channel": 15,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 4
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x4",
+    "case": "group_min",
+    "raw": "0x402000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 4
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x4",
+    "case": "group_max",
+    "raw": "0x4020F0D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 15,
+      "form": 0,
+      "statusMSB": 2,
+      "statusLSB": 4
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x3",
+    "case": "channel_min",
+    "raw": "0x3000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 3
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x3",
+    "case": "channel_max",
+    "raw": "0x300FD",
+    "decoded": {
+      "messageType": 13,
+      "channel": 15,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 3
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x3",
+    "case": "group_min",
+    "raw": "0x3000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 3
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x3",
+    "case": "group_max",
+    "raw": "0x30F0D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 15,
+      "form": 0,
+      "statusMSB": 3
     }
   },
   {
@@ -3576,6 +1464,54 @@
     }
   },
   {
+    "name": "FlexDataMessages.FlexDataMessages0x4",
+    "case": "channel_min",
+    "raw": "0x4000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 4
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x4",
+    "case": "channel_max",
+    "raw": "0x400FD",
+    "decoded": {
+      "messageType": 13,
+      "channel": 15,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 4
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x4",
+    "case": "group_min",
+    "raw": "0x4000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 4
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x4",
+    "case": "group_max",
+    "raw": "0x40F0D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 15,
+      "form": 0,
+      "statusMSB": 4
+    }
+  },
+  {
     "name": "FlexDataMessages.FlexDataMessages0x5",
     "case": "channel_min",
     "raw": "0x5000D",
@@ -3621,6 +1557,102 @@
       "group": 15,
       "form": 0,
       "statusMSB": 5
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x5",
+    "case": "channel_min",
+    "raw": "0x5000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 5
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x5",
+    "case": "channel_max",
+    "raw": "0x500FD",
+    "decoded": {
+      "messageType": 13,
+      "channel": 15,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 5
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x5",
+    "case": "group_min",
+    "raw": "0x5000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 5
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x5",
+    "case": "group_max",
+    "raw": "0x50F0D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 15,
+      "form": 0,
+      "statusMSB": 5
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x6",
+    "case": "channel_min",
+    "raw": "0x6000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 6
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x6",
+    "case": "channel_max",
+    "raw": "0x600FD",
+    "decoded": {
+      "messageType": 13,
+      "channel": 15,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 6
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x6",
+    "case": "group_min",
+    "raw": "0x6000D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 0,
+      "form": 0,
+      "statusMSB": 6
+    }
+  },
+  {
+    "name": "FlexDataMessages.FlexDataMessages0x6",
+    "case": "group_max",
+    "raw": "0x60F0D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 0,
+      "group": 15,
+      "form": 0,
+      "statusMSB": 6
     }
   },
   {
@@ -3960,7 +1992,7 @@
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x0",
+    "name": "FlexDataMessages.SubdivisionClicks1",
     "case": "channel_min",
     "raw": "0x2000D",
     "decoded": {
@@ -3969,11 +2001,12 @@
       "group": 0,
       "form": 0,
       "statusMSB": 2,
-      "statusLSB": 0
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x0",
+    "name": "FlexDataMessages.SubdivisionClicks1",
     "case": "channel_max",
     "raw": "0x200FD",
     "decoded": {
@@ -3982,11 +2015,12 @@
       "group": 0,
       "form": 0,
       "statusMSB": 2,
-      "statusLSB": 0
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x0",
+    "name": "FlexDataMessages.SubdivisionClicks1",
     "case": "group_min",
     "raw": "0x2000D",
     "decoded": {
@@ -3995,11 +2029,12 @@
       "group": 0,
       "form": 0,
       "statusMSB": 2,
-      "statusLSB": 0
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x0",
+    "name": "FlexDataMessages.SubdivisionClicks1",
     "case": "group_max",
     "raw": "0x20F0D",
     "decoded": {
@@ -4008,219 +2043,12 @@
       "group": 15,
       "form": 0,
       "statusMSB": 2,
-      "statusLSB": 0
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x1",
-    "case": "channel_min",
-    "raw": "0x102000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 1
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x1",
-    "case": "channel_max",
-    "raw": "0x10200FD",
-    "decoded": {
-      "messageType": 13,
-      "channel": 15,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 1
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x1",
-    "case": "group_min",
-    "raw": "0x102000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 1
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x1",
-    "case": "group_max",
-    "raw": "0x1020F0D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 15,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 1
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x2",
-    "case": "channel_min",
-    "raw": "0x202000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 2
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x2",
-    "case": "channel_max",
-    "raw": "0x20200FD",
-    "decoded": {
-      "messageType": 13,
-      "channel": 15,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 2
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x2",
-    "case": "group_min",
-    "raw": "0x202000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 2
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x2",
-    "case": "group_max",
-    "raw": "0x2020F0D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 15,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 2
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x3",
-    "case": "channel_min",
-    "raw": "0x302000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 3
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x3",
-    "case": "channel_max",
-    "raw": "0x30200FD",
-    "decoded": {
-      "messageType": 13,
-      "channel": 15,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 3
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x3",
-    "case": "group_min",
-    "raw": "0x302000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 3
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x3",
-    "case": "group_max",
-    "raw": "0x3020F0D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 15,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 3
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x4",
-    "case": "channel_min",
-    "raw": "0x402000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 4
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x4",
-    "case": "channel_max",
-    "raw": "0x40200FD",
-    "decoded": {
-      "messageType": 13,
-      "channel": 15,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 4
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x4",
-    "case": "group_min",
-    "raw": "0x402000D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 0,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 4
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x4",
-    "case": "group_max",
-    "raw": "0x4020F0D",
-    "decoded": {
-      "messageType": 13,
-      "channel": 0,
-      "group": 15,
-      "form": 0,
-      "statusMSB": 2,
-      "statusLSB": 4
-    }
-  },
-  {
-    "name": "FlexDataMessages.FlexDataMessages0x0",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
     "case": "channel_min",
     "raw": "0xD",
     "decoded": {
@@ -4228,11 +2056,12 @@
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 0
+      "statusMSB": 0,
+      "statusLSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x0",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
     "case": "channel_max",
     "raw": "0xFD",
     "decoded": {
@@ -4240,11 +2069,12 @@
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 0
+      "statusMSB": 0,
+      "statusLSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x0",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
     "case": "group_min",
     "raw": "0xD",
     "decoded": {
@@ -4252,11 +2082,12 @@
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 0
+      "statusMSB": 0,
+      "statusLSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x0",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
     "case": "group_max",
     "raw": "0xF0D",
     "decoded": {
@@ -4264,199 +2095,1648 @@
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 0
+      "statusMSB": 0,
+      "statusLSB": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x1",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
     "case": "channel_min",
-    "raw": "0x1000D",
+    "raw": "0x100000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 1
+      "statusMSB": 0,
+      "statusLSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x1",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
     "case": "channel_max",
-    "raw": "0x100FD",
+    "raw": "0x10000FD",
     "decoded": {
       "messageType": 13,
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 1
+      "statusMSB": 0,
+      "statusLSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x1",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
     "case": "group_min",
-    "raw": "0x1000D",
+    "raw": "0x100000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 1
+      "statusMSB": 0,
+      "statusLSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x1",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
     "case": "group_max",
-    "raw": "0x10F0D",
+    "raw": "0x1000F0D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 1
+      "statusMSB": 0,
+      "statusLSB": 1
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x2",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x5",
     "case": "channel_min",
-    "raw": "0x2000D",
+    "raw": "0x500000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 2
+      "statusMSB": 0,
+      "statusLSB": 5
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x2",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x5",
     "case": "channel_max",
-    "raw": "0x200FD",
+    "raw": "0x50000FD",
     "decoded": {
       "messageType": 13,
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 2
+      "statusMSB": 0,
+      "statusLSB": 5
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x2",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x5",
     "case": "group_min",
-    "raw": "0x2000D",
+    "raw": "0x500000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 2
+      "statusMSB": 0,
+      "statusLSB": 5
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x2",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x5",
     "case": "group_max",
-    "raw": "0x20F0D",
+    "raw": "0x5000F0D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 2
+      "statusMSB": 0,
+      "statusLSB": 5
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x3",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x6",
     "case": "channel_min",
-    "raw": "0x3000D",
+    "raw": "0x600000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 3
+      "statusMSB": 0,
+      "statusLSB": 6
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x3",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x6",
     "case": "channel_max",
-    "raw": "0x300FD",
+    "raw": "0x60000FD",
     "decoded": {
       "messageType": 13,
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 3
+      "statusMSB": 0,
+      "statusLSB": 6
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x3",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x6",
     "case": "group_min",
-    "raw": "0x3000D",
+    "raw": "0x600000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 3
+      "statusMSB": 0,
+      "statusLSB": 6
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x3",
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x6",
     "case": "group_max",
-    "raw": "0x30F0D",
+    "raw": "0x6000F0D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 3
+      "statusMSB": 0,
+      "statusLSB": 6
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x4",
+    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
     "case": "channel_min",
-    "raw": "0x4000D",
+    "raw": "0x200000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 4
+      "statusMSB": 0,
+      "statusLSB": 2,
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x4",
+    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
     "case": "channel_max",
-    "raw": "0x400FD",
+    "raw": "0x20000FD",
     "decoded": {
       "messageType": 13,
       "channel": 15,
       "group": 0,
       "form": 0,
-      "statusMSB": 4
+      "statusMSB": 0,
+      "statusLSB": 2,
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x4",
+    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
     "case": "group_min",
-    "raw": "0x4000D",
+    "raw": "0x200000D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 0,
       "form": 0,
-      "statusMSB": 4
+      "statusMSB": 0,
+      "statusLSB": 2,
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
     }
   },
   {
-    "name": "FlexDataMessages.FlexDataMessages0x4",
+    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
     "case": "group_max",
-    "raw": "0x40F0D",
+    "raw": "0x2000F0D",
     "decoded": {
       "messageType": 13,
       "channel": 0,
       "group": 15,
       "form": 0,
-      "statusMSB": 4
+      "statusMSB": 0,
+      "statusLSB": 2,
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ChannelPressureMessage",
+    "case": "group_min",
+    "raw": "0xD02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 13,
+      "channel": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ChannelPressureMessage",
+    "case": "group_max",
+    "raw": "0xDF2",
+    "decoded": {
+      "messageType": 2,
+      "group": 15,
+      "statusNibble": 13,
+      "channel": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ChannelPressureMessage",
+    "case": "channel_min",
+    "raw": "0xD02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 13,
+      "channel": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ChannelPressureMessage",
+    "case": "channel_max",
+    "raw": "0xFD02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 13,
+      "channel": 15,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ControlChangeMessage",
+    "case": "group_min",
+    "raw": "0xB02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 11,
+      "channel": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ControlChangeMessage",
+    "case": "group_max",
+    "raw": "0xBF2",
+    "decoded": {
+      "messageType": 2,
+      "group": 15,
+      "statusNibble": 11,
+      "channel": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ControlChangeMessage",
+    "case": "channel_min",
+    "raw": "0xB02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 11,
+      "channel": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ControlChangeMessage",
+    "case": "channel_max",
+    "raw": "0xFB02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 11,
+      "channel": 15,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.NoteOff",
+    "case": "group_min",
+    "raw": "0x802",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 8,
+      "channel": 0,
+      "noteNumber": 0,
+      "velocity": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.NoteOff",
+    "case": "group_max",
+    "raw": "0x8F2",
+    "decoded": {
+      "messageType": 2,
+      "group": 15,
+      "statusNibble": 8,
+      "channel": 0,
+      "noteNumber": 0,
+      "velocity": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.NoteOff",
+    "case": "channel_min",
+    "raw": "0x802",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 8,
+      "channel": 0,
+      "noteNumber": 0,
+      "velocity": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.NoteOff",
+    "case": "channel_max",
+    "raw": "0xF802",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 8,
+      "channel": 15,
+      "noteNumber": 0,
+      "velocity": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.NoteOn",
+    "case": "group_min",
+    "raw": "0x902",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 0,
+      "velocity": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.NoteOn",
+    "case": "group_max",
+    "raw": "0x9F2",
+    "decoded": {
+      "messageType": 2,
+      "group": 15,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 0,
+      "velocity": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.NoteOn",
+    "case": "channel_min",
+    "raw": "0x902",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 0,
+      "velocity": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.NoteOn",
+    "case": "channel_max",
+    "raw": "0xF902",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 15,
+      "noteNumber": 0,
+      "velocity": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.PitchBend",
+    "case": "group_min",
+    "raw": "0xE02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 14,
+      "channel": 0,
+      "LSBdata": 0,
+      "MSBdata": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.PitchBend",
+    "case": "group_max",
+    "raw": "0xEF2",
+    "decoded": {
+      "messageType": 2,
+      "group": 15,
+      "statusNibble": 14,
+      "channel": 0,
+      "LSBdata": 0,
+      "MSBdata": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.PitchBend",
+    "case": "channel_min",
+    "raw": "0xE02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 14,
+      "channel": 0,
+      "LSBdata": 0,
+      "MSBdata": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.PitchBend",
+    "case": "channel_max",
+    "raw": "0xFE02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 14,
+      "channel": 15,
+      "LSBdata": 0,
+      "MSBdata": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.PolyPressure",
+    "case": "group_min",
+    "raw": "0xA02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 10,
+      "channel": 0,
+      "noteNumber": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.PolyPressure",
+    "case": "group_max",
+    "raw": "0xAF2",
+    "decoded": {
+      "messageType": 2,
+      "group": 15,
+      "statusNibble": 10,
+      "channel": 0,
+      "noteNumber": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.PolyPressure",
+    "case": "channel_min",
+    "raw": "0xA02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 10,
+      "channel": 0,
+      "noteNumber": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.PolyPressure",
+    "case": "channel_max",
+    "raw": "0xFA02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 10,
+      "channel": 15,
+      "noteNumber": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ProgramChangeMessage",
+    "case": "group_min",
+    "raw": "0xC02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 12,
+      "channel": 0,
+      "program": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ProgramChangeMessage",
+    "case": "group_max",
+    "raw": "0xCF2",
+    "decoded": {
+      "messageType": 2,
+      "group": 15,
+      "statusNibble": 12,
+      "channel": 0,
+      "program": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ProgramChangeMessage",
+    "case": "channel_min",
+    "raw": "0xC02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 12,
+      "channel": 0,
+      "program": 0
+    }
+  },
+  {
+    "name": "MIDI10ChannelVoiceMessages.ProgramChangeMessage",
+    "case": "channel_max",
+    "raw": "0xFC02",
+    "decoded": {
+      "messageType": 2,
+      "group": 0,
+      "statusNibble": 12,
+      "channel": 15,
+      "program": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.AssignableControllerNRPNMessages",
+    "case": "group_min",
+    "raw": "0x304",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 3,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.AssignableControllerNRPNMessages",
+    "case": "group_max",
+    "raw": "0x3F4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 3,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.AssignableControllerNRPNMessages",
+    "case": "channel_min",
+    "raw": "0x304",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 3,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.AssignableControllerNRPNMessages",
+    "case": "channel_max",
+    "raw": "0xF304",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 3,
+      "channel": 15,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.AssignablePerNoteController",
+    "case": "group_min",
+    "raw": "0x104",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 1,
+      "channel": 0,
+      "noteNumber": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.AssignablePerNoteController",
+    "case": "group_max",
+    "raw": "0x1F4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 1,
+      "channel": 0,
+      "noteNumber": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.AssignablePerNoteController",
+    "case": "channel_min",
+    "raw": "0x104",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 1,
+      "channel": 0,
+      "noteNumber": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.AssignablePerNoteController",
+    "case": "channel_max",
+    "raw": "0xF104",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 1,
+      "channel": 15,
+      "noteNumber": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ChannelPressureMessage",
+    "case": "group_min",
+    "raw": "0xD04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 13,
+      "channel": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ChannelPressureMessage",
+    "case": "group_max",
+    "raw": "0xDF4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 13,
+      "channel": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ChannelPressureMessage",
+    "case": "channel_min",
+    "raw": "0xD04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 13,
+      "channel": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ChannelPressureMessage",
+    "case": "channel_max",
+    "raw": "0xFD04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 13,
+      "channel": 15,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ControlChangeMessage",
+    "case": "group_min",
+    "raw": "0xB04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 11,
+      "channel": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ControlChangeMessage",
+    "case": "group_max",
+    "raw": "0xBF4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 11,
+      "channel": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ControlChangeMessage",
+    "case": "channel_min",
+    "raw": "0xB04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 11,
+      "channel": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ControlChangeMessage",
+    "case": "channel_max",
+    "raw": "0xFB04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 11,
+      "channel": 15,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.NoteOff",
+    "case": "group_min",
+    "raw": "0x804",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 8,
+      "channel": 0,
+      "noteNumber": 0,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.NoteOff",
+    "case": "group_max",
+    "raw": "0x8F4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 8,
+      "channel": 0,
+      "noteNumber": 0,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.NoteOff",
+    "case": "channel_min",
+    "raw": "0x804",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 8,
+      "channel": 0,
+      "noteNumber": 0,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.NoteOff",
+    "case": "channel_max",
+    "raw": "0xF804",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 8,
+      "channel": 15,
+      "noteNumber": 0,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.NoteOn",
+    "case": "group_min",
+    "raw": "0x904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 0,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.NoteOn",
+    "case": "group_max",
+    "raw": "0x9F4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 0,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.NoteOn",
+    "case": "channel_min",
+    "raw": "0x904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 0,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.NoteOn",
+    "case": "channel_max",
+    "raw": "0xF904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 15,
+      "noteNumber": 0,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PerNoteManagementMessage",
+    "case": "group_min",
+    "raw": "0xF04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 15,
+      "channel": 0,
+      "noteNumber": 0,
+      "DetachPerNotecontrollersfrompreviouslyreceivedNotes": 0,
+      "ResetSetPerNotecontrollerstodefaultvalues": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PerNoteManagementMessage",
+    "case": "group_max",
+    "raw": "0xFF4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 15,
+      "channel": 0,
+      "noteNumber": 0,
+      "DetachPerNotecontrollersfrompreviouslyreceivedNotes": 0,
+      "ResetSetPerNotecontrollerstodefaultvalues": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PerNoteManagementMessage",
+    "case": "channel_min",
+    "raw": "0xF04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 15,
+      "channel": 0,
+      "noteNumber": 0,
+      "DetachPerNotecontrollersfrompreviouslyreceivedNotes": 0,
+      "ResetSetPerNotecontrollerstodefaultvalues": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PerNoteManagementMessage",
+    "case": "channel_max",
+    "raw": "0xFF04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 15,
+      "channel": 15,
+      "noteNumber": 0,
+      "DetachPerNotecontrollersfrompreviouslyreceivedNotes": 0,
+      "ResetSetPerNotecontrollerstodefaultvalues": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PerNotePitchBend",
+    "case": "group_min",
+    "raw": "0x604",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 6,
+      "channel": 0,
+      "noteNumber": 0,
+      "pitch": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PerNotePitchBend",
+    "case": "group_max",
+    "raw": "0x6F4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 6,
+      "channel": 0,
+      "noteNumber": 0,
+      "pitch": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PerNotePitchBend",
+    "case": "channel_min",
+    "raw": "0x604",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 6,
+      "channel": 0,
+      "noteNumber": 0,
+      "pitch": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PerNotePitchBend",
+    "case": "channel_max",
+    "raw": "0xF604",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 6,
+      "channel": 15,
+      "noteNumber": 0,
+      "pitch": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PitchBend",
+    "case": "group_min",
+    "raw": "0xE04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 14,
+      "channel": 0,
+      "pitch": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PitchBend",
+    "case": "group_max",
+    "raw": "0xEF4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 14,
+      "channel": 0,
+      "pitch": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PitchBend",
+    "case": "channel_min",
+    "raw": "0xE04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 14,
+      "channel": 0,
+      "pitch": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PitchBend",
+    "case": "channel_max",
+    "raw": "0xFE04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 14,
+      "channel": 15,
+      "pitch": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PolyPressure",
+    "case": "group_min",
+    "raw": "0xA04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 10,
+      "channel": 0,
+      "noteNumber": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PolyPressure",
+    "case": "group_max",
+    "raw": "0xAF4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 10,
+      "channel": 0,
+      "noteNumber": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PolyPressure",
+    "case": "channel_min",
+    "raw": "0xA04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 10,
+      "channel": 0,
+      "noteNumber": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.PolyPressure",
+    "case": "channel_max",
+    "raw": "0xFA04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 10,
+      "channel": 15,
+      "noteNumber": 0,
+      "Pressure": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ProgramChangeMessage",
+    "case": "group_min",
+    "raw": "0xC04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 12,
+      "channel": 0,
+      "bankValid": 0,
+      "program": 0,
+      "BankMSB": 0,
+      "BankLSB": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ProgramChangeMessage",
+    "case": "group_max",
+    "raw": "0xCF4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 12,
+      "channel": 0,
+      "bankValid": 0,
+      "program": 0,
+      "BankMSB": 0,
+      "BankLSB": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ProgramChangeMessage",
+    "case": "channel_min",
+    "raw": "0xC04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 12,
+      "channel": 0,
+      "bankValid": 0,
+      "program": 0,
+      "BankMSB": 0,
+      "BankLSB": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.ProgramChangeMessage",
+    "case": "channel_max",
+    "raw": "0xFC04",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 12,
+      "channel": 15,
+      "bankValid": 0,
+      "program": 0,
+      "BankMSB": 0,
+      "BankLSB": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RegisteredControllerRPN",
+    "case": "group_min",
+    "raw": "0x204",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 2,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RegisteredControllerRPN",
+    "case": "group_max",
+    "raw": "0x2F4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 2,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RegisteredControllerRPN",
+    "case": "channel_min",
+    "raw": "0x204",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 2,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RegisteredControllerRPN",
+    "case": "channel_max",
+    "raw": "0xF204",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 2,
+      "channel": 15,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RegisteredPerNoteController",
+    "case": "group_min",
+    "raw": "0x4",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 0,
+      "channel": 0,
+      "noteNumber": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RegisteredPerNoteController",
+    "case": "group_max",
+    "raw": "0xF4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 0,
+      "channel": 0,
+      "noteNumber": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RegisteredPerNoteController",
+    "case": "channel_min",
+    "raw": "0x4",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 0,
+      "channel": 0,
+      "noteNumber": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RegisteredPerNoteController",
+    "case": "channel_max",
+    "raw": "0xF004",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 0,
+      "channel": 15,
+      "noteNumber": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RelativeAssignableControllerNRPN",
+    "case": "group_min",
+    "raw": "0x504",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 5,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RelativeAssignableControllerNRPN",
+    "case": "group_max",
+    "raw": "0x5F4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 5,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RelativeAssignableControllerNRPN",
+    "case": "channel_min",
+    "raw": "0x504",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 5,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RelativeAssignableControllerNRPN",
+    "case": "channel_max",
+    "raw": "0xF504",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 5,
+      "channel": 15,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RelativeRegisteredControllerRPN",
+    "case": "group_min",
+    "raw": "0x404",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 4,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RelativeRegisteredControllerRPN",
+    "case": "group_max",
+    "raw": "0x4F4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 4,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RelativeRegisteredControllerRPN",
+    "case": "channel_min",
+    "raw": "0x404",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 4,
+      "channel": 0,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDI20ChannelVoiceMessages.RelativeRegisteredControllerRPN",
+    "case": "channel_max",
+    "raw": "0xF404",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 4,
+      "channel": 15,
+      "Bank": 0,
+      "index": 0,
+      "value": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.EndofFileMessage",
+    "case": "form_min",
+    "raw": "0x84F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 33
+    }
+  },
+  {
+    "name": "MIDIEndpoint.EndofFileMessage",
+    "case": "form_max",
+    "raw": "0x87F",
+    "decoded": {
+      "messageType": 15,
+      "form": 3,
+      "status10": 33
+    }
+  },
+  {
+    "name": "MIDIEndpoint.FunctionBlockInfoNotification",
+    "case": "form_min",
+    "raw": "0x44F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 17,
+      "Active": 0,
+      "FunctionBlock": 0,
+      "UIHint": 0,
+      "IsMIDI10": 0,
+      "Direction": 0,
+      "FirstGroup": 0,
+      "GroupLength": 0,
+      "MIDICISupport": 0,
+      "MaxSysExStreams": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.FunctionBlockInfoNotification",
+    "case": "form_max",
+    "raw": "0x47F",
+    "decoded": {
+      "messageType": 15,
+      "form": 3,
+      "status10": 17,
+      "Active": 0,
+      "FunctionBlock": 0,
+      "UIHint": 0,
+      "IsMIDI10": 0,
+      "Direction": 0,
+      "FirstGroup": 0,
+      "GroupLength": 0,
+      "MIDICISupport": 0,
+      "MaxSysExStreams": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.FunctionBlockInfoNotification",
+    "case": "Active_min",
+    "raw": "0x44F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 17,
+      "Active": 0,
+      "FunctionBlock": 0,
+      "UIHint": 0,
+      "IsMIDI10": 0,
+      "Direction": 0,
+      "FirstGroup": 0,
+      "GroupLength": 0,
+      "MIDICISupport": 0,
+      "MaxSysExStreams": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.FunctionBlockInfoNotification",
+    "case": "Active_max",
+    "raw": "0x1044F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 17,
+      "Active": 1,
+      "FunctionBlock": 0,
+      "UIHint": 0,
+      "IsMIDI10": 0,
+      "Direction": 0,
+      "FirstGroup": 0,
+      "GroupLength": 0,
+      "MIDICISupport": 0,
+      "MaxSysExStreams": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.FunctionBlockNameNotification",
+    "case": "form_min",
+    "raw": "0x48F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 18,
+      "FunctionBlock": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0,
+      "Byte7": 0,
+      "Byte8": 0,
+      "Byte9": 0,
+      "Byte10": 0,
+      "Byte11": 0,
+      "Byte12": 0,
+      "Byte13": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.FunctionBlockNameNotification",
+    "case": "form_max",
+    "raw": "0x4BF",
+    "decoded": {
+      "messageType": 15,
+      "form": 3,
+      "status10": 18,
+      "FunctionBlock": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0,
+      "Byte7": 0,
+      "Byte8": 0,
+      "Byte9": 0,
+      "Byte10": 0,
+      "Byte11": 0,
+      "Byte12": 0,
+      "Byte13": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.FunctionBlockNameNotification",
+    "case": "FunctionBlock_min",
+    "raw": "0x48F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 18,
+      "FunctionBlock": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0,
+      "Byte7": 0,
+      "Byte8": 0,
+      "Byte9": 0,
+      "Byte10": 0,
+      "Byte11": 0,
+      "Byte12": 0,
+      "Byte13": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.FunctionBlockNameNotification",
+    "case": "FunctionBlock_max",
+    "raw": "0xFF048F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 18,
+      "FunctionBlock": 255,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0,
+      "Byte7": 0,
+      "Byte8": 0,
+      "Byte9": 0,
+      "Byte10": 0,
+      "Byte11": 0,
+      "Byte12": 0,
+      "Byte13": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.GetFunctionBlockInfo",
+    "case": "form_min",
+    "raw": "0x40F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 16,
+      "FunctionBlock": 0,
+      "RequestingaFunctionBlockNameNotification": 0,
+      "RequestingaFunctionBlockInfoNotification": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.GetFunctionBlockInfo",
+    "case": "form_max",
+    "raw": "0x43F",
+    "decoded": {
+      "messageType": 15,
+      "form": 3,
+      "status10": 16,
+      "FunctionBlock": 0,
+      "RequestingaFunctionBlockNameNotification": 0,
+      "RequestingaFunctionBlockInfoNotification": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.GetFunctionBlockInfo",
+    "case": "FunctionBlock_min",
+    "raw": "0x40F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 16,
+      "FunctionBlock": 0,
+      "RequestingaFunctionBlockNameNotification": 0,
+      "RequestingaFunctionBlockInfoNotification": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.GetFunctionBlockInfo",
+    "case": "FunctionBlock_max",
+    "raw": "0xFF040F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 16,
+      "FunctionBlock": 255,
+      "RequestingaFunctionBlockNameNotification": 0,
+      "RequestingaFunctionBlockInfoNotification": 0
     }
   },
   {
@@ -4505,62 +3785,6 @@
       "status10": 0,
       "UMPVersionMajor": 255,
       "UMPVersionMinor": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.MIDIEndpointInfoNotify",
-    "case": "form_min",
-    "raw": "0x4F",
-    "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 1,
-      "UMPVersionMajor": 0,
-      "UMPVersionMinor": 0,
-      "StaticFunctionBlocks": 0,
-      "NumberofFunctionBlocks": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.MIDIEndpointInfoNotify",
-    "case": "form_max",
-    "raw": "0x7F",
-    "decoded": {
-      "messageType": 15,
-      "form": 3,
-      "status10": 1,
-      "UMPVersionMajor": 0,
-      "UMPVersionMinor": 0,
-      "StaticFunctionBlocks": 0,
-      "NumberofFunctionBlocks": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.MIDIEndpointInfoNotify",
-    "case": "UMPVersionMajor_min",
-    "raw": "0x4F",
-    "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 1,
-      "UMPVersionMajor": 0,
-      "UMPVersionMinor": 0,
-      "StaticFunctionBlocks": 0,
-      "NumberofFunctionBlocks": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.MIDIEndpointInfoNotify",
-    "case": "UMPVersionMajor_max",
-    "raw": "0xFF004F",
-    "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 1,
-      "UMPVersionMajor": 255,
-      "UMPVersionMinor": 0,
-      "StaticFunctionBlocks": 0,
-      "NumberofFunctionBlocks": 0
     }
   },
   {
@@ -4645,6 +3869,62 @@
       "SoftwareRevisionLevel2": 0,
       "SoftwareRevisionLevel3": 0,
       "SoftwareRevisionLevel4": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.MIDIEndpointInfoNotify",
+    "case": "form_min",
+    "raw": "0x4F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 1,
+      "UMPVersionMajor": 0,
+      "UMPVersionMinor": 0,
+      "StaticFunctionBlocks": 0,
+      "NumberofFunctionBlocks": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.MIDIEndpointInfoNotify",
+    "case": "form_max",
+    "raw": "0x7F",
+    "decoded": {
+      "messageType": 15,
+      "form": 3,
+      "status10": 1,
+      "UMPVersionMajor": 0,
+      "UMPVersionMinor": 0,
+      "StaticFunctionBlocks": 0,
+      "NumberofFunctionBlocks": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.MIDIEndpointInfoNotify",
+    "case": "UMPVersionMajor_min",
+    "raw": "0x4F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 1,
+      "UMPVersionMajor": 0,
+      "UMPVersionMinor": 0,
+      "StaticFunctionBlocks": 0,
+      "NumberofFunctionBlocks": 0
+    }
+  },
+  {
+    "name": "MIDIEndpoint.MIDIEndpointInfoNotify",
+    "case": "UMPVersionMajor_max",
+    "raw": "0xFF004F",
+    "decoded": {
+      "messageType": 15,
+      "form": 0,
+      "status10": 1,
+      "UMPVersionMajor": 255,
+      "UMPVersionMinor": 0,
+      "StaticFunctionBlocks": 0,
+      "NumberofFunctionBlocks": 0
     }
   },
   {
@@ -4840,47 +4120,23 @@
     }
   },
   {
-    "name": "MIDIEndpoint.StreamConfigurationRequest",
+    "name": "MIDIEndpoint.StartofSequenceMessage",
     "case": "form_min",
-    "raw": "0x14F",
+    "raw": "0x80F",
     "decoded": {
       "messageType": 15,
       "form": 0,
-      "status10": 5,
-      "Protocol": 0
+      "status10": 32
     }
   },
   {
-    "name": "MIDIEndpoint.StreamConfigurationRequest",
+    "name": "MIDIEndpoint.StartofSequenceMessage",
     "case": "form_max",
-    "raw": "0x17F",
+    "raw": "0x83F",
     "decoded": {
       "messageType": 15,
       "form": 3,
-      "status10": 5,
-      "Protocol": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.StreamConfigurationRequest",
-    "case": "Protocol_min",
-    "raw": "0x14F",
-    "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 5,
-      "Protocol": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.StreamConfigurationRequest",
-    "case": "Protocol_max",
-    "raw": "0xFF014F",
-    "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 5,
-      "Protocol": 255
+      "status10": 32
     }
   },
   {
@@ -4928,267 +4184,1011 @@
     }
   },
   {
-    "name": "MIDIEndpoint.GetFunctionBlockInfo",
+    "name": "MIDIEndpoint.StreamConfigurationRequest",
     "case": "form_min",
-    "raw": "0x40F",
+    "raw": "0x14F",
     "decoded": {
       "messageType": 15,
       "form": 0,
-      "status10": 16,
-      "FunctionBlock": 0,
-      "RequestingaFunctionBlockNameNotification": 0,
-      "RequestingaFunctionBlockInfoNotification": 0
+      "status10": 5,
+      "Protocol": 0
     }
   },
   {
-    "name": "MIDIEndpoint.GetFunctionBlockInfo",
+    "name": "MIDIEndpoint.StreamConfigurationRequest",
     "case": "form_max",
-    "raw": "0x43F",
+    "raw": "0x17F",
     "decoded": {
       "messageType": 15,
       "form": 3,
-      "status10": 16,
-      "FunctionBlock": 0,
-      "RequestingaFunctionBlockNameNotification": 0,
-      "RequestingaFunctionBlockInfoNotification": 0
+      "status10": 5,
+      "Protocol": 0
     }
   },
   {
-    "name": "MIDIEndpoint.GetFunctionBlockInfo",
-    "case": "FunctionBlock_min",
-    "raw": "0x40F",
+    "name": "MIDIEndpoint.StreamConfigurationRequest",
+    "case": "Protocol_min",
+    "raw": "0x14F",
     "decoded": {
       "messageType": 15,
       "form": 0,
-      "status10": 16,
-      "FunctionBlock": 0,
-      "RequestingaFunctionBlockNameNotification": 0,
-      "RequestingaFunctionBlockInfoNotification": 0
+      "status10": 5,
+      "Protocol": 0
     }
   },
   {
-    "name": "MIDIEndpoint.GetFunctionBlockInfo",
-    "case": "FunctionBlock_max",
-    "raw": "0xFF040F",
+    "name": "MIDIEndpoint.StreamConfigurationRequest",
+    "case": "Protocol_max",
+    "raw": "0xFF014F",
     "decoded": {
       "messageType": 15,
       "form": 0,
-      "status10": 16,
-      "FunctionBlock": 255,
-      "RequestingaFunctionBlockNameNotification": 0,
-      "RequestingaFunctionBlockInfoNotification": 0
+      "status10": 5,
+      "Protocol": 255
     }
   },
   {
-    "name": "MIDIEndpoint.FunctionBlockInfoNotification",
-    "case": "form_min",
-    "raw": "0x44F",
+    "name": "SysEx.CompleteSystemExclusiveMessageinOnePacket",
+    "case": "group_min",
+    "raw": "0x3",
     "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 17,
-      "Active": 0,
-      "FunctionBlock": 0,
-      "UIHint": 0,
-      "IsMIDI10": 0,
-      "Direction": 0,
-      "FirstGroup": 0,
-      "GroupLength": 0,
-      "MIDICISupport": 0,
-      "MaxSysExStreams": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.FunctionBlockInfoNotification",
-    "case": "form_max",
-    "raw": "0x47F",
-    "decoded": {
-      "messageType": 15,
-      "form": 3,
-      "status10": 17,
-      "Active": 0,
-      "FunctionBlock": 0,
-      "UIHint": 0,
-      "IsMIDI10": 0,
-      "Direction": 0,
-      "FirstGroup": 0,
-      "GroupLength": 0,
-      "MIDICISupport": 0,
-      "MaxSysExStreams": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.FunctionBlockInfoNotification",
-    "case": "Active_min",
-    "raw": "0x44F",
-    "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 17,
-      "Active": 0,
-      "FunctionBlock": 0,
-      "UIHint": 0,
-      "IsMIDI10": 0,
-      "Direction": 0,
-      "FirstGroup": 0,
-      "GroupLength": 0,
-      "MIDICISupport": 0,
-      "MaxSysExStreams": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.FunctionBlockInfoNotification",
-    "case": "Active_max",
-    "raw": "0x1044F",
-    "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 17,
-      "Active": 1,
-      "FunctionBlock": 0,
-      "UIHint": 0,
-      "IsMIDI10": 0,
-      "Direction": 0,
-      "FirstGroup": 0,
-      "GroupLength": 0,
-      "MIDICISupport": 0,
-      "MaxSysExStreams": 0
-    }
-  },
-  {
-    "name": "MIDIEndpoint.FunctionBlockNameNotification",
-    "case": "form_min",
-    "raw": "0x48F",
-    "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 18,
-      "FunctionBlock": 0,
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 0,
+      "byteCount": 0,
       "Byte1": 0,
       "Byte2": 0,
       "Byte3": 0,
       "Byte4": 0,
       "Byte5": 0,
-      "Byte6": 0,
-      "Byte7": 0,
-      "Byte8": 0,
-      "Byte9": 0,
-      "Byte10": 0,
-      "Byte11": 0,
-      "Byte12": 0,
-      "Byte13": 0
+      "Byte6": 0
     }
   },
   {
-    "name": "MIDIEndpoint.FunctionBlockNameNotification",
-    "case": "form_max",
-    "raw": "0x4BF",
+    "name": "SysEx.CompleteSystemExclusiveMessageinOnePacket",
+    "case": "group_max",
+    "raw": "0xF3",
     "decoded": {
-      "messageType": 15,
-      "form": 3,
-      "status10": 18,
-      "FunctionBlock": 0,
+      "messageType": 3,
+      "group": 15,
+      "sysexForm": 0,
+      "byteCount": 0,
       "Byte1": 0,
       "Byte2": 0,
       "Byte3": 0,
       "Byte4": 0,
       "Byte5": 0,
-      "Byte6": 0,
-      "Byte7": 0,
-      "Byte8": 0,
-      "Byte9": 0,
-      "Byte10": 0,
-      "Byte11": 0,
-      "Byte12": 0,
-      "Byte13": 0
+      "Byte6": 0
     }
   },
   {
-    "name": "MIDIEndpoint.FunctionBlockNameNotification",
-    "case": "FunctionBlock_min",
-    "raw": "0x48F",
+    "name": "SysEx.CompleteSystemExclusiveMessageinOnePacket",
+    "case": "byteCount_min",
+    "raw": "0x3",
     "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 18,
-      "FunctionBlock": 0,
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 0,
+      "byteCount": 0,
       "Byte1": 0,
       "Byte2": 0,
       "Byte3": 0,
       "Byte4": 0,
       "Byte5": 0,
-      "Byte6": 0,
-      "Byte7": 0,
-      "Byte8": 0,
-      "Byte9": 0,
-      "Byte10": 0,
-      "Byte11": 0,
-      "Byte12": 0,
-      "Byte13": 0
+      "Byte6": 0
     }
   },
   {
-    "name": "MIDIEndpoint.FunctionBlockNameNotification",
-    "case": "FunctionBlock_max",
-    "raw": "0xFF048F",
+    "name": "SysEx.CompleteSystemExclusiveMessageinOnePacket",
+    "case": "byteCount_max",
+    "raw": "0xF003",
     "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 18,
-      "FunctionBlock": 255,
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 0,
+      "byteCount": 15,
       "Byte1": 0,
       "Byte2": 0,
       "Byte3": 0,
       "Byte4": 0,
       "Byte5": 0,
-      "Byte6": 0,
-      "Byte7": 0,
-      "Byte8": 0,
-      "Byte9": 0,
-      "Byte10": 0,
-      "Byte11": 0,
-      "Byte12": 0,
-      "Byte13": 0
+      "Byte6": 0
     }
   },
   {
-    "name": "MIDIEndpoint.StartofSequenceMessage",
-    "case": "form_min",
-    "raw": "0x80F",
+    "name": "SysEx.SystemExclusiveContinuePacket",
+    "case": "group_min",
+    "raw": "0x203",
     "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 32
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 2,
+      "byteCount": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
     }
   },
   {
-    "name": "MIDIEndpoint.StartofSequenceMessage",
-    "case": "form_max",
-    "raw": "0x83F",
+    "name": "SysEx.SystemExclusiveContinuePacket",
+    "case": "group_max",
+    "raw": "0x2F3",
     "decoded": {
-      "messageType": 15,
-      "form": 3,
-      "status10": 32
+      "messageType": 3,
+      "group": 15,
+      "sysexForm": 2,
+      "byteCount": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
     }
   },
   {
-    "name": "MIDIEndpoint.EndofFileMessage",
-    "case": "form_min",
-    "raw": "0x84F",
+    "name": "SysEx.SystemExclusiveContinuePacket",
+    "case": "byteCount_min",
+    "raw": "0x203",
     "decoded": {
-      "messageType": 15,
-      "form": 0,
-      "status10": 33
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 2,
+      "byteCount": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
     }
   },
   {
-    "name": "MIDIEndpoint.EndofFileMessage",
-    "case": "form_max",
-    "raw": "0x87F",
+    "name": "SysEx.SystemExclusiveContinuePacket",
+    "case": "byteCount_max",
+    "raw": "0xF203",
     "decoded": {
-      "messageType": 15,
-      "form": 3,
-      "status10": 33
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 2,
+      "byteCount": 15,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
+    }
+  },
+  {
+    "name": "SysEx.SystemExclusiveEndPacket",
+    "case": "group_min",
+    "raw": "0x303",
+    "decoded": {
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 3,
+      "byteCount": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
+    }
+  },
+  {
+    "name": "SysEx.SystemExclusiveEndPacket",
+    "case": "group_max",
+    "raw": "0x3F3",
+    "decoded": {
+      "messageType": 3,
+      "group": 15,
+      "sysexForm": 3,
+      "byteCount": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
+    }
+  },
+  {
+    "name": "SysEx.SystemExclusiveEndPacket",
+    "case": "byteCount_min",
+    "raw": "0x303",
+    "decoded": {
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 3,
+      "byteCount": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
+    }
+  },
+  {
+    "name": "SysEx.SystemExclusiveEndPacket",
+    "case": "byteCount_max",
+    "raw": "0xF303",
+    "decoded": {
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 3,
+      "byteCount": 15,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
+    }
+  },
+  {
+    "name": "SysEx.SystemExclusiveStartPacket",
+    "case": "group_min",
+    "raw": "0x103",
+    "decoded": {
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 1,
+      "byteCount": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
+    }
+  },
+  {
+    "name": "SysEx.SystemExclusiveStartPacket",
+    "case": "group_max",
+    "raw": "0x1F3",
+    "decoded": {
+      "messageType": 3,
+      "group": 15,
+      "sysexForm": 1,
+      "byteCount": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
+    }
+  },
+  {
+    "name": "SysEx.SystemExclusiveStartPacket",
+    "case": "byteCount_min",
+    "raw": "0x103",
+    "decoded": {
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 1,
+      "byteCount": 0,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
+    }
+  },
+  {
+    "name": "SysEx.SystemExclusiveStartPacket",
+    "case": "byteCount_max",
+    "raw": "0xF103",
+    "decoded": {
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 1,
+      "byteCount": 15,
+      "Byte1": 0,
+      "Byte2": 0,
+      "Byte3": 0,
+      "Byte4": 0,
+      "Byte5": 0,
+      "Byte6": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.CompleteSystemExclusive8MessageinOnePacket",
+    "case": "group_min",
+    "raw": "0x5",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 0,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.CompleteSystemExclusive8MessageinOnePacket",
+    "case": "group_max",
+    "raw": "0xF5",
+    "decoded": {
+      "messageType": 5,
+      "group": 15,
+      "sysex8Form": 0,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.CompleteSystemExclusive8MessageinOnePacket",
+    "case": "byteCount_min",
+    "raw": "0x5",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 0,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.CompleteSystemExclusive8MessageinOnePacket",
+    "case": "byteCount_max",
+    "raw": "0xF005",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 0,
+      "byteCount": 15,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.MixedDataSetHeader",
+    "case": "group_min",
+    "raw": "0x805",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 8,
+      "byteCount": 0,
+      "mdsId": 0,
+      "numberofvalidbytesinthismessagechunk": 0,
+      "numberofchunksinmixeddataset": 0,
+      "numberofthischunk": 0,
+      "manufacturerid": 0,
+      "deviceid": 0,
+      "subid1": 0,
+      "subid2": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.MixedDataSetHeader",
+    "case": "group_max",
+    "raw": "0x8F5",
+    "decoded": {
+      "messageType": 5,
+      "group": 15,
+      "sysex8Form": 8,
+      "byteCount": 0,
+      "mdsId": 0,
+      "numberofvalidbytesinthismessagechunk": 0,
+      "numberofchunksinmixeddataset": 0,
+      "numberofthischunk": 0,
+      "manufacturerid": 0,
+      "deviceid": 0,
+      "subid1": 0,
+      "subid2": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.MixedDataSetHeader",
+    "case": "byteCount_min",
+    "raw": "0x805",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 8,
+      "byteCount": 0,
+      "mdsId": 0,
+      "numberofvalidbytesinthismessagechunk": 0,
+      "numberofchunksinmixeddataset": 0,
+      "numberofthischunk": 0,
+      "manufacturerid": 0,
+      "deviceid": 0,
+      "subid1": 0,
+      "subid2": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.MixedDataSetHeader",
+    "case": "byteCount_max",
+    "raw": "0xF805",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 8,
+      "byteCount": 15,
+      "mdsId": 0,
+      "numberofvalidbytesinthismessagechunk": 0,
+      "numberofchunksinmixeddataset": 0,
+      "numberofthischunk": 0,
+      "manufacturerid": 0,
+      "deviceid": 0,
+      "subid1": 0,
+      "subid2": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.MixedDataSetPayload",
+    "case": "group_min",
+    "raw": "0x905",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 9,
+      "byteCount": 0,
+      "mdsId": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.MixedDataSetPayload",
+    "case": "group_max",
+    "raw": "0x9F5",
+    "decoded": {
+      "messageType": 5,
+      "group": 15,
+      "sysex8Form": 9,
+      "byteCount": 0,
+      "mdsId": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.MixedDataSetPayload",
+    "case": "byteCount_min",
+    "raw": "0x905",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 9,
+      "byteCount": 0,
+      "mdsId": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.MixedDataSetPayload",
+    "case": "byteCount_max",
+    "raw": "0xF905",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 9,
+      "byteCount": 15,
+      "mdsId": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusive8ContinuePacket",
+    "case": "group_min",
+    "raw": "0x205",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 2,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusive8ContinuePacket",
+    "case": "group_max",
+    "raw": "0x2F5",
+    "decoded": {
+      "messageType": 5,
+      "group": 15,
+      "sysex8Form": 2,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusive8ContinuePacket",
+    "case": "byteCount_min",
+    "raw": "0x205",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 2,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusive8ContinuePacket",
+    "case": "byteCount_max",
+    "raw": "0xF205",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 2,
+      "byteCount": 15,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusive8StartPacket",
+    "case": "group_min",
+    "raw": "0x105",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 1,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusive8StartPacket",
+    "case": "group_max",
+    "raw": "0x1F5",
+    "decoded": {
+      "messageType": 5,
+      "group": 15,
+      "sysex8Form": 1,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusive8StartPacket",
+    "case": "byteCount_min",
+    "raw": "0x105",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 1,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusive8StartPacket",
+    "case": "byteCount_max",
+    "raw": "0xF105",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 1,
+      "byteCount": 15,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusiveEndPacket",
+    "case": "group_min",
+    "raw": "0x305",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 3,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusiveEndPacket",
+    "case": "group_max",
+    "raw": "0x3F5",
+    "decoded": {
+      "messageType": 5,
+      "group": 15,
+      "sysex8Form": 3,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusiveEndPacket",
+    "case": "byteCount_min",
+    "raw": "0x305",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 3,
+      "byteCount": 0,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SysEx8andMDS.SystemExclusiveEndPacket",
+    "case": "byteCount_max",
+    "raw": "0xF305",
+    "decoded": {
+      "messageType": 5,
+      "group": 0,
+      "sysex8Form": 3,
+      "byteCount": 15,
+      "streamid": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.ActiveSensing",
+    "case": "group_min",
+    "raw": "0xFE01",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 254
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.ActiveSensing",
+    "case": "group_max",
+    "raw": "0xFEF1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 254
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.Continue",
+    "case": "group_min",
+    "raw": "0xFB01",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 251
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.Continue",
+    "case": "group_max",
+    "raw": "0xFBF1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 251
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.MIDITimeCode",
+    "case": "group_min",
+    "raw": "0xF101",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 241,
+      "nnndddd": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.MIDITimeCode",
+    "case": "group_max",
+    "raw": "0xF1F1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 241,
+      "nnndddd": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.MIDITimeCode",
+    "case": "nnndddd_min",
+    "raw": "0xF101",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 241,
+      "nnndddd": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.MIDITimeCode",
+    "case": "nnndddd_max",
+    "raw": "0xFEF101",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 241,
+      "nnndddd": 127
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.Reset",
+    "case": "group_min",
+    "raw": "0xFF01",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 255
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.Reset",
+    "case": "group_max",
+    "raw": "0xFFF1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 255
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.SongPositionPointer",
+    "case": "group_min",
+    "raw": "0xF201",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 242,
+      "lllllll": 0,
+      "mmmmmmm": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.SongPositionPointer",
+    "case": "group_max",
+    "raw": "0xF2F1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 242,
+      "lllllll": 0,
+      "mmmmmmm": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.SongPositionPointer",
+    "case": "lllllll_min",
+    "raw": "0xF201",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 242,
+      "lllllll": 0,
+      "mmmmmmm": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.SongPositionPointer",
+    "case": "lllllll_max",
+    "raw": "0xFEF201",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 242,
+      "lllllll": 127,
+      "mmmmmmm": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.SongSelect",
+    "case": "group_min",
+    "raw": "0xF301",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 243,
+      "sssssss": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.SongSelect",
+    "case": "group_max",
+    "raw": "0xF3F1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 243,
+      "sssssss": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.SongSelect",
+    "case": "sssssss_min",
+    "raw": "0xF301",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 243,
+      "sssssss": 0
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.SongSelect",
+    "case": "sssssss_max",
+    "raw": "0xFEF301",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 243,
+      "sssssss": 127
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.Start",
+    "case": "group_min",
+    "raw": "0xFA01",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 250
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.Start",
+    "case": "group_max",
+    "raw": "0xFAF1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 250
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.Stop",
+    "case": "group_min",
+    "raw": "0xFC01",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 252
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.Stop",
+    "case": "group_max",
+    "raw": "0xFCF1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 252
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.TimingClock",
+    "case": "group_min",
+    "raw": "0xF801",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 248
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.TimingClock",
+    "case": "group_max",
+    "raw": "0xF8F1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 248
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.TuneRequest",
+    "case": "group_min",
+    "raw": "0xF601",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 246
+    }
+  },
+  {
+    "name": "SystemRealTimeandSystemCommonMessages.TuneRequest",
+    "case": "group_max",
+    "raw": "0xF6F1",
+    "decoded": {
+      "messageType": 1,
+      "group": 15,
+      "statusByte": 246
+    }
+  },
+  {
+    "name": "UtilityMessages.DeltaClockstamp",
+    "case": "group_min",
+    "raw": "0x400",
+    "decoded": {
+      "messageType": 0,
+      "group": 0,
+      "statusCode": 4
+    }
+  },
+  {
+    "name": "UtilityMessages.DeltaClockstamp",
+    "case": "group_max",
+    "raw": "0x4F0",
+    "decoded": {
+      "messageType": 0,
+      "group": 15,
+      "statusCode": 4
+    }
+  },
+  {
+    "name": "UtilityMessages.DeltaClockstampTicksPerQuarterNote",
+    "case": "group_min",
+    "raw": "0x300",
+    "decoded": {
+      "messageType": 0,
+      "group": 0,
+      "statusCode": 3
+    }
+  },
+  {
+    "name": "UtilityMessages.DeltaClockstampTicksPerQuarterNote",
+    "case": "group_max",
+    "raw": "0x3F0",
+    "decoded": {
+      "messageType": 0,
+      "group": 15,
+      "statusCode": 3
+    }
+  },
+  {
+    "name": "UtilityMessages.JRClock",
+    "case": "group_min",
+    "raw": "0x100",
+    "decoded": {
+      "messageType": 0,
+      "group": 0,
+      "statusCode": 1
+    }
+  },
+  {
+    "name": "UtilityMessages.JRClock",
+    "case": "group_max",
+    "raw": "0x1F0",
+    "decoded": {
+      "messageType": 0,
+      "group": 15,
+      "statusCode": 1
+    }
+  },
+  {
+    "name": "UtilityMessages.JRTimestamp",
+    "case": "group_min",
+    "raw": "0x200",
+    "decoded": {
+      "messageType": 0,
+      "group": 0,
+      "statusCode": 2
+    }
+  },
+  {
+    "name": "UtilityMessages.JRTimestamp",
+    "case": "group_max",
+    "raw": "0x2F0",
+    "decoded": {
+      "messageType": 0,
+      "group": 15,
+      "statusCode": 2
+    }
+  },
+  {
+    "name": "UtilityMessages.NOOP",
+    "case": "group_min",
+    "raw": "0x0",
+    "decoded": {
+      "messageType": 0,
+      "group": 0,
+      "statusCode": 0
+    }
+  },
+  {
+    "name": "UtilityMessages.NOOP",
+    "case": "group_max",
+    "raw": "0xF0",
+    "decoded": {
+      "messageType": 0,
+      "group": 15,
+      "statusCode": 0
     }
   }
 ]
