@@ -1,19 +1,10 @@
 [
   {
-    "machine": "MIDI-CI.DiscoveryRequest",
+    "machine": "MIDI-CI.ConfirmationNewProtocolEstablishedMessage",
     "sequence": [
-      "Start",
-      "Reply"
+      "Notify"
     ],
     "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.DiscoveryRequest",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
   },
   {
     "machine": "MIDI-CI.DiscoveryReply",
@@ -23,6 +14,38 @@
     "expect": "Completed"
   },
   {
+    "machine": "MIDI-CI.DiscoveryRequest",
+    "sequence": [
+      "Start",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.DiscoveryRequest",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
+  },
+  {
+    "machine": "MIDI-CI.InitiateProtocolNegotiationMessage",
+    "sequence": [
+      "Start",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.InitiateProtocolNegotiationMessage",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
+  },
+  {
     "machine": "MIDI-CI.InquiryEndpointInformation",
     "sequence": [
       "Start",
@@ -39,7 +62,90 @@
     "expect": "Failed"
   },
   {
-    "machine": "MIDI-CI.ReplytoEndpointInformation",
+    "machine": "MIDI-CI.InquiryGetPropertyData",
+    "sequence": [
+      "Start",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.InquiryGetPropertyData",
+    "sequence": [
+      "Start",
+      "ReplyChunk",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.InquiryGetPropertyData",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
+  },
+  {
+    "machine": "MIDI-CI.InquiryMIDIMessageReport",
+    "sequence": [
+      "Start",
+      "ReplyBegin",
+      "ReplyEnd"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.InquiryMIDIMessageReport",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
+  },
+  {
+    "machine": "MIDI-CI.InquiryPropertyExchangeCapabilities",
+    "sequence": [
+      "Start",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.InquiryPropertyExchangeCapabilities",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
+  },
+  {
+    "machine": "MIDI-CI.InquirySetPropertyData",
+    "sequence": [
+      "Start",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.InquirySetPropertyData",
+    "sequence": [
+      "Start",
+      "ReplyChunk",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.InquirySetPropertyData",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
+  },
+  {
+    "machine": "MIDI-CI.InvalidateMUID",
     "sequence": [
       "Notify"
     ],
@@ -53,288 +159,7 @@
     "expect": "Completed"
   },
   {
-    "machine": "MIDI-CI.InvalidateMUID",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
     "machine": "MIDI-CI.MIDICINAK",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InitiateProtocolNegotiationMessage",
-    "sequence": [
-      "Start",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InitiateProtocolNegotiationMessage",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
-  },
-  {
-    "machine": "MIDI-CI.ReplytoInitiateProtocolNegotiationMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.SetNewProtocolMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.TestNewProtocolInitiatortoResponderMessage",
-    "sequence": [
-      "Start",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.TestNewProtocolInitiatortoResponderMessage",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
-  },
-  {
-    "machine": "MIDI-CI.TestNewProtocolRespondertoInitiatorMessage",
-    "sequence": [
-      "Start",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.TestNewProtocolRespondertoInitiatorMessage",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
-  },
-  {
-    "machine": "MIDI-CI.ConfirmationNewProtocolEstablishedMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.ProfileInquiryMessage",
-    "sequence": [
-      "Start",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.ProfileInquiryMessage",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
-  },
-  {
-    "machine": "MIDI-CI.ReplytoProfileInquiryMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.SetProfileOnMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.SetProfileOffMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.ProfileEnabledReportMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.ProfileDisabledReportMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.ProfileAddedReportMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.ProfileRemovedReportMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.ProfileDetailsInquiryMessage",
-    "sequence": [
-      "Start",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.ProfileDetailsInquiryMessage",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
-  },
-  {
-    "machine": "MIDI-CI.ReplytoProfileDetailsInquiryMessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.ProfileSpecificDatamessage",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InquiryPropertyExchangeCapabilities",
-    "sequence": [
-      "Start",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InquiryPropertyExchangeCapabilities",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
-  },
-  {
-    "machine": "MIDI-CI.ReplytoPropertyExchangeCapabilities",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InquiryGetPropertyData",
-    "sequence": [
-      "Start",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InquiryGetPropertyData",
-    "sequence": [
-      "Start",
-      "ReplyChunk",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InquiryGetPropertyData",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
-  },
-  {
-    "machine": "MIDI-CI.ReplytoGetPropertyData",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InquirySetPropertyData",
-    "sequence": [
-      "Start",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InquirySetPropertyData",
-    "sequence": [
-      "Start",
-      "ReplyChunk",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.InquirySetPropertyData",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
-  },
-  {
-    "machine": "MIDI-CI.ReplytoSetPropertyData",
-    "sequence": [
-      "Notify"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.Subscription",
-    "sequence": [
-      "Start",
-      "Reply"
-    ],
-    "expect": "Completed"
-  },
-  {
-    "machine": "MIDI-CI.Subscription",
-    "sequence": [
-      "Start",
-      "Timeout"
-    ],
-    "expect": "Failed"
-  },
-  {
-    "machine": "MIDI-CI.ReplytoSubscription",
     "sequence": [
       "Notify"
     ],
@@ -364,28 +189,92 @@
     "expect": "Failed"
   },
   {
-    "machine": "MIDI-CI.ReplytoProcessInquiryMessage",
+    "machine": "MIDI-CI.ProfileAddedReportMessage",
     "sequence": [
       "Notify"
     ],
     "expect": "Completed"
   },
   {
-    "machine": "MIDI-CI.InquiryMIDIMessageReport",
+    "machine": "MIDI-CI.ProfileDetailsInquiryMessage",
     "sequence": [
       "Start",
-      "ReplyBegin",
-      "ReplyEnd"
+      "Reply"
     ],
     "expect": "Completed"
   },
   {
-    "machine": "MIDI-CI.InquiryMIDIMessageReport",
+    "machine": "MIDI-CI.ProfileDetailsInquiryMessage",
     "sequence": [
       "Start",
       "Timeout"
     ],
     "expect": "Failed"
+  },
+  {
+    "machine": "MIDI-CI.ProfileDisabledReportMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ProfileEnabledReportMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ProfileInquiryMessage",
+    "sequence": [
+      "Start",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ProfileInquiryMessage",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
+  },
+  {
+    "machine": "MIDI-CI.ProfileRemovedReportMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ProfileSpecificDatamessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ReplytoEndpointInformation",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ReplytoGetPropertyData",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ReplytoInitiateProtocolNegotiationMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
   },
   {
     "machine": "MIDI-CI.ReplytoMIDIMessageReportBegin",
@@ -400,5 +289,116 @@
       "Notify"
     ],
     "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ReplytoProcessInquiryMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ReplytoProfileDetailsInquiryMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ReplytoProfileInquiryMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ReplytoPropertyExchangeCapabilities",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ReplytoSetPropertyData",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.ReplytoSubscription",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.SetNewProtocolMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.SetProfileOffMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.SetProfileOnMessage",
+    "sequence": [
+      "Notify"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.Subscription",
+    "sequence": [
+      "Start",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.Subscription",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
+  },
+  {
+    "machine": "MIDI-CI.TestNewProtocolInitiatortoResponderMessage",
+    "sequence": [
+      "Start",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.TestNewProtocolInitiatortoResponderMessage",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
+  },
+  {
+    "machine": "MIDI-CI.TestNewProtocolRespondertoInitiatorMessage",
+    "sequence": [
+      "Start",
+      "Reply"
+    ],
+    "expect": "Completed"
+  },
+  {
+    "machine": "MIDI-CI.TestNewProtocolRespondertoInitiatorMessage",
+    "sequence": [
+      "Start",
+      "Timeout"
+    ],
+    "expect": "Failed"
   }
 ]
