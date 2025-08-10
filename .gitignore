@@ -1,9 +1,57 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js dependencies & build artifacts
 node_modules/
-midi2usb/build/
 midi2usb/node_modules/
 midi2usb/package-lock.json
+
+# Swift / Xcode build artifacts
+build/
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.swiftpm
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Swift Playground
+timeline.xctimeline
+playground.xcworkspace
+
+# User-specific Xcode settings
+xcuserdata/
+*.xcuserstate
+
+# Output directories
 output/
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
+midi2usb/build/
+
+# Archives & Bundles
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.framework
+*.xcframework
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Cache
+*.xcuserdatad
+*.xcshareddata
+
+# Package Manager specific
+Package.resolved

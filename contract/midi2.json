@@ -1,4 +1,6843 @@
 {
-  "generatedAt": "2025-08-09T18:53:42.988Z",
-  "note": "TODO: replace with data extracted from Workbench runtime"
+  "$schema": "https://fountain.example/schemas/midi2-contract.schema.json",
+  "meta": {
+    "workbench_commit": "unknown",
+    "generated_at": "2025-08-10T03:56:27.571Z"
+  },
+  "enums": {},
+  "messages": [
+    {
+      "name": "UtilityMessages.NOOP",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 0
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusCode",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 0
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "UtilityMessages.JRClock",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 0
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusCode",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 1
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "UtilityMessages.JRTimestamp",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 0
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusCode",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 2
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "UtilityMessages.DeltaClockstampTicksPerQuarterNote",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 0
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusCode",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 3
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "UtilityMessages.DeltaClockstamp",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 0
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusCode",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 4
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.MIDITimeCode",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 241
+        },
+        {
+          "name": "nnndddd",
+          "bitOffset": 17,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.SongPositionPointer",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 242
+        },
+        {
+          "name": "lllllll",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "mmmmmmm",
+          "bitOffset": 24,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.SongSelect",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 243
+        },
+        {
+          "name": "sssssss",
+          "bitOffset": 17,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.TuneRequest",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 246
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.TimingClock",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 248
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.Start",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 250
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.Continue",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 251
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.Stop",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 252
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.ActiveSensing",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 254
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SystemRealTimeandSystemCommonMessages.Reset",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusByte",
+          "bitOffset": 8,
+          "bitWidth": 8,
+          "value": 255
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI10ChannelVoiceMessages.NoteOff",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 8
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "velocity",
+          "bitOffset": 25,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI10ChannelVoiceMessages.NoteOn",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 9
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "velocity",
+          "bitOffset": 25,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI10ChannelVoiceMessages.PolyPressure",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 10
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "Pressure",
+          "bitOffset": 25,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI10ChannelVoiceMessages.ControlChangeMessage",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 11
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "index",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "value",
+          "bitOffset": 25,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI10ChannelVoiceMessages.ProgramChangeMessage",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 12
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "program",
+          "bitOffset": 17,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI10ChannelVoiceMessages.ChannelPressureMessage",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Pressure",
+          "bitOffset": 17,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI10ChannelVoiceMessages.PitchBend",
+      "container": "UMP32",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 14
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "LSBdata",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "MSBdata",
+          "bitOffset": 25,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 32"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx.CompleteSystemExclusiveMessageinOnePacket",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 3
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysexForm",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 0
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Byte1",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte2",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte3",
+          "bitOffset": 33,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte4",
+          "bitOffset": 41,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte5",
+          "bitOffset": 49,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte6",
+          "bitOffset": 57,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx.SystemExclusiveStartPacket",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 3
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysexForm",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Byte1",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte2",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte3",
+          "bitOffset": 33,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte4",
+          "bitOffset": 41,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte5",
+          "bitOffset": 49,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte6",
+          "bitOffset": 57,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx.SystemExclusiveContinuePacket",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 3
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysexForm",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Byte1",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte2",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte3",
+          "bitOffset": 33,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte4",
+          "bitOffset": 41,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte5",
+          "bitOffset": 49,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte6",
+          "bitOffset": 57,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx.SystemExclusiveEndPacket",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 3
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysexForm",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 3
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Byte1",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte2",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte3",
+          "bitOffset": 33,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte4",
+          "bitOffset": 41,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte5",
+          "bitOffset": 49,
+          "bitWidth": 7
+        },
+        {
+          "name": "Byte6",
+          "bitOffset": 57,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.NoteOff",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 8
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "attributeType",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "velocity",
+          "bitOffset": 32,
+          "bitWidth": 16
+        },
+        {
+          "name": "attribute",
+          "bitOffset": 48,
+          "bitWidth": 16
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.NoteOn",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 9
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "attributeType",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "velocity",
+          "bitOffset": 32,
+          "bitWidth": 16
+        },
+        {
+          "name": "attribute",
+          "bitOffset": 48,
+          "bitWidth": 16
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.PolyPressure",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 10
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "Pressure",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.ControlChangeMessage",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 11
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "index",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "value",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.RegisteredControllerRPN",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Bank",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "index",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "value",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.AssignableControllerNRPNMessages",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 3
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Bank",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "index",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "value",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.RelativeRegisteredControllerRPN",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Bank",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "index",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "value",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.RelativeAssignableControllerNRPN",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 5
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Bank",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "index",
+          "bitOffset": 25,
+          "bitWidth": 7
+        },
+        {
+          "name": "value",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.ProgramChangeMessage",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 12
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "bankValid",
+          "bitOffset": 31,
+          "bitWidth": 1
+        },
+        {
+          "name": "program",
+          "bitOffset": 33,
+          "bitWidth": 7
+        },
+        {
+          "name": "BankMSB",
+          "bitOffset": 49,
+          "bitWidth": 7
+        },
+        {
+          "name": "BankLSB",
+          "bitOffset": 57,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.ChannelPressureMessage",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "Pressure",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.PitchBend",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 14
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "pitch",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.PerNotePitchBend",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 6
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "pitch",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.AssignablePerNoteController",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "index",
+          "bitOffset": 24,
+          "bitWidth": 8
+        },
+        {
+          "name": "value",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.RegisteredPerNoteController",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 0
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "index",
+          "bitOffset": 24,
+          "bitWidth": 8
+        },
+        {
+          "name": "value",
+          "bitOffset": 32,
+          "bitWidth": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDI20ChannelVoiceMessages.PerNoteManagementMessage",
+      "container": "UMP64",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 4
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "statusNibble",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "channel",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "noteNumber",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "DetachPerNotecontrollersfrompreviouslyreceivedNotes",
+          "bitOffset": 30,
+          "bitWidth": 1
+        },
+        {
+          "name": "ResetSetPerNotecontrollerstodefaultvalues",
+          "bitOffset": 31,
+          "bitWidth": 1
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 64"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx8andMDS.CompleteSystemExclusive8MessageinOnePacket",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 5
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysex8Form",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 0
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "streamid",
+          "bitOffset": 16,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx8andMDS.SystemExclusive8StartPacket",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 5
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysex8Form",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 1
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "streamid",
+          "bitOffset": 16,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx8andMDS.SystemExclusive8ContinuePacket",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 5
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysex8Form",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 2
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "streamid",
+          "bitOffset": 16,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx8andMDS.SystemExclusiveEndPacket",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 5
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysex8Form",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 3
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "streamid",
+          "bitOffset": 16,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx8andMDS.MixedDataSetHeader",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 5
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysex8Form",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 8
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "mdsId",
+          "bitOffset": 16,
+          "bitWidth": 8
+        },
+        {
+          "name": "numberofvalidbytesinthismessagechunk",
+          "bitOffset": 24,
+          "bitWidth": 8
+        },
+        {
+          "name": "numberofchunksinmixeddataset",
+          "bitOffset": 32,
+          "bitWidth": 16
+        },
+        {
+          "name": "numberofthischunk",
+          "bitOffset": 48,
+          "bitWidth": 16
+        },
+        {
+          "name": "manufacturerid",
+          "bitOffset": 64,
+          "bitWidth": 16
+        },
+        {
+          "name": "deviceid",
+          "bitOffset": 80,
+          "bitWidth": 16
+        },
+        {
+          "name": "subid1",
+          "bitOffset": 96,
+          "bitWidth": 16
+        },
+        {
+          "name": "subid2",
+          "bitOffset": 112,
+          "bitWidth": 16
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "SysEx8andMDS.MixedDataSetPayload",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 5
+        },
+        {
+          "name": "group",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "sysex8Form",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "value": 9
+        },
+        {
+          "name": "byteCount",
+          "bitOffset": 12,
+          "bitWidth": 4
+        },
+        {
+          "name": "mdsId",
+          "bitOffset": 16,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 0
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 0
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 0
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 1
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 0
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 2
+        },
+        {
+          "name": "SubdivisionClicks1",
+          "bitOffset": 64,
+          "bitWidth": 8
+        },
+        {
+          "name": "SubdivisionClicks2",
+          "bitOffset": 72,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x5",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 0
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 5
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x6",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 0
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 6
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x0",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 0
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.SubdivisionClicks1",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 2
+        },
+        {
+          "name": "SubdivisionClicks1",
+          "bitOffset": 64,
+          "bitWidth": 8
+        },
+        {
+          "name": "SubdivisionClicks2",
+          "bitOffset": 72,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x5",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 5
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x6",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 6
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x0",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 0
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x1",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 1
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x2",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 2
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x3",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 3
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x4",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 4
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x5",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 5
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x6",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 6
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x7",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x8",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0x9",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 9
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0xA",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 10
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0xB",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 11
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1FlexDataMessages0xC",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 12
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x0",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 0
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x2",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 2
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x3",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 3
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x4",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 4
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x5",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 5
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x6",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 6
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x7",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x8",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x9",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 9
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0xA",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 10
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0xB",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 11
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0xC",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 12
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x0",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 2
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 0
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x1",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 2
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 1
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x2",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 2
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 2
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x3",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 2
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 3
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x2FlexDataMessages0x4",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 2
+        },
+        {
+          "name": "statusLSB",
+          "bitOffset": 24,
+          "bitWidth": 8,
+          "value": 4
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x0",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 0
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x1",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 1
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x2",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 2
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x3",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 3
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "FlexDataMessages.FlexDataMessages0x4",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 13
+        },
+        {
+          "name": "channel",
+          "bitOffset": 4,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "group",
+          "bitOffset": 8,
+          "bitWidth": 4,
+          "range": [
+            0,
+            15
+          ]
+        },
+        {
+          "name": "form",
+          "bitOffset": 12,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "statusMSB",
+          "bitOffset": 16,
+          "bitWidth": 8,
+          "value": 4
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.GetMIDIEndpointInfo",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 0
+        },
+        {
+          "name": "UMPVersionMajor",
+          "bitOffset": 16,
+          "bitWidth": 8
+        },
+        {
+          "name": "UMPVersionMinor",
+          "bitOffset": 24,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.MIDIEndpointInfoNotify",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 1
+        },
+        {
+          "name": "UMPVersionMajor",
+          "bitOffset": 16,
+          "bitWidth": 8
+        },
+        {
+          "name": "UMPVersionMinor",
+          "bitOffset": 24,
+          "bitWidth": 8
+        },
+        {
+          "name": "StaticFunctionBlocks",
+          "bitOffset": 32,
+          "bitWidth": 1
+        },
+        {
+          "name": "NumberofFunctionBlocks",
+          "bitOffset": 33,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.MIDIEndpointDeviceInfoNotify",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 2
+        },
+        {
+          "name": "ManufacturerIdByte1",
+          "bitOffset": 41,
+          "bitWidth": 7
+        },
+        {
+          "name": "ManufacturerIdByte2",
+          "bitOffset": 49,
+          "bitWidth": 7
+        },
+        {
+          "name": "ManufacturerIdByte3",
+          "bitOffset": 57,
+          "bitWidth": 7
+        },
+        {
+          "name": "FamilyIdLSB",
+          "bitOffset": 65,
+          "bitWidth": 7
+        },
+        {
+          "name": "FamilyIdMSB",
+          "bitOffset": 73,
+          "bitWidth": 7
+        },
+        {
+          "name": "ModelIdLSB",
+          "bitOffset": 81,
+          "bitWidth": 7
+        },
+        {
+          "name": "ModelIdMSB",
+          "bitOffset": 89,
+          "bitWidth": 7
+        },
+        {
+          "name": "SoftwareRevisionLevel1",
+          "bitOffset": 97,
+          "bitWidth": 7
+        },
+        {
+          "name": "SoftwareRevisionLevel2",
+          "bitOffset": 105,
+          "bitWidth": 7
+        },
+        {
+          "name": "SoftwareRevisionLevel3",
+          "bitOffset": 113,
+          "bitWidth": 7
+        },
+        {
+          "name": "SoftwareRevisionLevel4",
+          "bitOffset": 121,
+          "bitWidth": 7
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.MIDIEndpointNameNotify",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 3
+        },
+        {
+          "name": "Byte1",
+          "bitOffset": 16,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte2",
+          "bitOffset": 24,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte3",
+          "bitOffset": 32,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte4",
+          "bitOffset": 40,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte5",
+          "bitOffset": 48,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte6",
+          "bitOffset": 56,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte7",
+          "bitOffset": 64,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte8",
+          "bitOffset": 72,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte9",
+          "bitOffset": 80,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte10",
+          "bitOffset": 88,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte11",
+          "bitOffset": 96,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte12",
+          "bitOffset": 104,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte13",
+          "bitOffset": 112,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte14",
+          "bitOffset": 120,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.MIDIEndpointProductInstanceIdNotify",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 4
+        },
+        {
+          "name": "Byte1",
+          "bitOffset": 16,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte2",
+          "bitOffset": 24,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte3",
+          "bitOffset": 32,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte4",
+          "bitOffset": 40,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte5",
+          "bitOffset": 48,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte6",
+          "bitOffset": 56,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte7",
+          "bitOffset": 64,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte8",
+          "bitOffset": 72,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte9",
+          "bitOffset": 80,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte10",
+          "bitOffset": 88,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte11",
+          "bitOffset": 96,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte12",
+          "bitOffset": 104,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte13",
+          "bitOffset": 112,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte14",
+          "bitOffset": 120,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.StreamConfigurationRequest",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 5
+        },
+        {
+          "name": "Protocol",
+          "bitOffset": 16,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.StreamConfigurationNotify",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 6
+        },
+        {
+          "name": "Protocol",
+          "bitOffset": 16,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.GetFunctionBlockInfo",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 16
+        },
+        {
+          "name": "FunctionBlock",
+          "bitOffset": 16,
+          "bitWidth": 8
+        },
+        {
+          "name": "RequestingaFunctionBlockNameNotification",
+          "bitOffset": 30,
+          "bitWidth": 1
+        },
+        {
+          "name": "RequestingaFunctionBlockInfoNotification",
+          "bitOffset": 31,
+          "bitWidth": 1
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.FunctionBlockInfoNotification",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 17
+        },
+        {
+          "name": "Active",
+          "bitOffset": 16,
+          "bitWidth": 1
+        },
+        {
+          "name": "FunctionBlock",
+          "bitOffset": 17,
+          "bitWidth": 7
+        },
+        {
+          "name": "UIHint",
+          "bitOffset": 26,
+          "bitWidth": 2
+        },
+        {
+          "name": "IsMIDI10",
+          "bitOffset": 28,
+          "bitWidth": 2
+        },
+        {
+          "name": "Direction",
+          "bitOffset": 30,
+          "bitWidth": 2
+        },
+        {
+          "name": "FirstGroup",
+          "bitOffset": 32,
+          "bitWidth": 8
+        },
+        {
+          "name": "GroupLength",
+          "bitOffset": 40,
+          "bitWidth": 8
+        },
+        {
+          "name": "MIDICISupport",
+          "bitOffset": 49,
+          "bitWidth": 7
+        },
+        {
+          "name": "MaxSysExStreams",
+          "bitOffset": 56,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.FunctionBlockNameNotification",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 18
+        },
+        {
+          "name": "FunctionBlock",
+          "bitOffset": 16,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte1",
+          "bitOffset": 24,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte2",
+          "bitOffset": 32,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte3",
+          "bitOffset": 40,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte4",
+          "bitOffset": 48,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte5",
+          "bitOffset": 56,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte6",
+          "bitOffset": 64,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte7",
+          "bitOffset": 72,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte8",
+          "bitOffset": 80,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte9",
+          "bitOffset": 88,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte10",
+          "bitOffset": 96,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte11",
+          "bitOffset": 104,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte12",
+          "bitOffset": 112,
+          "bitWidth": 8
+        },
+        {
+          "name": "Byte13",
+          "bitOffset": 120,
+          "bitWidth": 8
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.StartofSequenceMessage",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 32
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    },
+    {
+      "name": "MIDIEndpoint.EndofFileMessage",
+      "container": "UMP128",
+      "fields": [
+        {
+          "name": "messageType",
+          "bitOffset": 0,
+          "bitWidth": 4,
+          "value": 15
+        },
+        {
+          "name": "form",
+          "bitOffset": 4,
+          "bitWidth": 2,
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "status10",
+          "bitOffset": 6,
+          "bitWidth": 10,
+          "value": 33
+        }
+      ],
+      "invariants": [
+        "bits_sum <= 128"
+      ],
+      "provenance": {
+        "file": "libs/messageTypes.js",
+        "line": 68
+      }
+    }
+  ],
+  "state_machines": [
+    {
+      "name": "MIDI-CI.DiscoveryRequest",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.DiscoveryReply",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.InquiryEndpointInformation",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoEndpointInformation",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.MIDICIACK",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.InvalidateMUID",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.MIDICINAK",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.InitiateProtocolNegotiationMessage",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoInitiateProtocolNegotiationMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.SetNewProtocolMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.TestNewProtocolInitiatortoResponderMessage",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.TestNewProtocolRespondertoInitiatorMessage",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ConfirmationNewProtocolEstablishedMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ProfileInquiryMessage",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoProfileInquiryMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.SetProfileOnMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.SetProfileOffMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ProfileEnabledReportMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ProfileDisabledReportMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ProfileAddedReportMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ProfileRemovedReportMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ProfileDetailsInquiryMessage",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoProfileDetailsInquiryMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ProfileSpecificDatamessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.InquiryPropertyExchangeCapabilities",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoPropertyExchangeCapabilities",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.InquiryGetPropertyData",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Chunking",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "ReplyChunk",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "ReplyChunk",
+          "to": "Chunking"
+        },
+        {
+          "from": "Chunking",
+          "on": "ReplyChunk",
+          "to": "Chunking"
+        },
+        {
+          "from": "Chunking",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        },
+        {
+          "from": "Chunking",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "Chunking",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoGetPropertyData",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.InquirySetPropertyData",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Chunking",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "ReplyChunk",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "ReplyChunk",
+          "to": "Chunking"
+        },
+        {
+          "from": "Chunking",
+          "on": "ReplyChunk",
+          "to": "Chunking"
+        },
+        {
+          "from": "Chunking",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        },
+        {
+          "from": "Chunking",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "Chunking",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoSetPropertyData",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.Subscription",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoSubscription",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.NotifyMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ProcessInquiryMessage",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "Reply",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Reply",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoProcessInquiryMessage",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.InquiryMIDIMessageReport",
+      "states": [
+        "Idle",
+        "RequestSent",
+        "Streaming",
+        "Completed",
+        "Failed"
+      ],
+      "events": [
+        "Start",
+        "ReplyBegin",
+        "ReplyEnd",
+        "Timeout",
+        "Error"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Start",
+          "to": "RequestSent"
+        },
+        {
+          "from": "RequestSent",
+          "on": "ReplyBegin",
+          "to": "Streaming"
+        },
+        {
+          "from": "Streaming",
+          "on": "ReplyEnd",
+          "to": "Completed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "RequestSent",
+          "on": "Error",
+          "to": "Failed"
+        },
+        {
+          "from": "Streaming",
+          "on": "Timeout",
+          "to": "Failed"
+        },
+        {
+          "from": "Streaming",
+          "on": "Error",
+          "to": "Failed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoMIDIMessageReportBegin",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    },
+    {
+      "name": "MIDI-CI.ReplytoMIDIMessageReportEnd",
+      "states": [
+        "Idle",
+        "Completed"
+      ],
+      "events": [
+        "Notify"
+      ],
+      "transitions": [
+        {
+          "from": "Idle",
+          "on": "Notify",
+          "to": "Completed"
+        }
+      ],
+      "provenance": {
+        "file": "libs/midiCITables.js",
+        "line": 35
+      }
+    }
+  ],
+  "resources": {
+    "Profiles": [
+      {
+        "bank": 33,
+        "index": 0,
+        "name": "Default Control Change Mapping"
+      },
+      {
+        "bank": 0,
+        "index": 0,
+        "name": "General MIDI 2"
+      },
+      {
+        "bank": 33,
+        "index": 2,
+        "name": "General MIDI 2 Single Channel"
+      },
+      {
+        "bank": 32,
+        "index": 1,
+        "name": "Drawbar Organ"
+      },
+      {
+        "bank": 97,
+        "index": 0,
+        "name": "Rotary Speaker Effect"
+      },
+      {
+        "bank": 33,
+        "index": 1,
+        "name": "Note On Orchestral Articulation"
+      },
+      {
+        "bank": 49,
+        "index": 0,
+        "name": "MPE"
+      }
+    ],
+    "PropertyExchange": {
+      "schemas": [
+        {
+          "id": "ResourceList"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "DeviceInfo"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "ChannelList"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "JSONSchema"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "ModeList"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "CurrentMode"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "ProgramList"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "ExternalSync"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "LocalOn"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "ChannelMode"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "BasicChannelRx"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "BasicChannelTx"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "State"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "StateList"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "MaxSysex8Streams"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "AllCtrlList"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "ChCtrlList"
+        },
+        {
+          "id": "schema"
+        },
+        {
+          "id": "CtrlMapList"
+        },
+        {
+          "id": "schema"
+        }
+      ]
+    }
+  }
 }

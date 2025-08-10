@@ -1,5 +1,12 @@
 [
   {
-    "note": "TODO: replace with ump_system data extracted from Workbench runtime"
+    "case": "mtc_qf_zero",
+    "raw": "0xF101",
+    "decoded": {
+      "messageType": 1,
+      "group": 0,
+      "statusByte": 241,
+      "nnndddd": 0
+    }
   }
 ]

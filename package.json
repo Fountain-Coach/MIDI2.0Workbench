@@ -10,7 +10,9 @@
     "pack": "electron-builder --dir ",
     "build": "electron-builder --publish=never",
     "postinstall": "electron-builder install-app-deps",
-    "icons": "electron-icon-builder -f --input=icon.png --output=build"
+    "icons": "electron-icon-builder -f --input=icon.png --output=build",
+    "swift:all": "bash scripts/run-swift-pipeline.sh",
+    "swift:gen": "node scripts/extract-static.js && node scripts/codegen-swift.js && node scripts/codegen-swift-tests.js && node scripts/codegen-profiles.js"
   },
   "author": "Andrew Mee <andrew@mipex.io>",
   "license": "MIT",

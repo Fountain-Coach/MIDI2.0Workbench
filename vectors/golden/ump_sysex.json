@@ -1,0 +1,18 @@
+[
+  {
+    "case": "sysex_complete_6bytes",
+    "raw": "0x6040212FEFC6003",
+    "decoded": {
+      "messageType": 3,
+      "group": 0,
+      "sysexForm": 0,
+      "byteCount": 6,
+      "Byte1": 126,
+      "Byte2": 127,
+      "Byte3": 9,
+      "Byte4": 1,
+      "Byte5": 2,
+      "Byte6": 3
+    }
+  }
+]

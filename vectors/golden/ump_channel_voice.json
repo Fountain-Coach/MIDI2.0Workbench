@@ -1,5 +1,128 @@
 [
   {
-    "note": "TODO: replace with ump_channel_voice data extracted from Workbench runtime"
+    "case": "group_min",
+    "raw": "0x780904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 60,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "case": "group_max",
+    "raw": "0x7809F4",
+    "decoded": {
+      "messageType": 4,
+      "group": 15,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 60,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "case": "channel_min",
+    "raw": "0x780904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 60,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "case": "channel_max",
+    "raw": "0x78F904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 15,
+      "noteNumber": 60,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "case": "noteNumber_min",
+    "raw": "0x904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 0,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "case": "noteNumber_max",
+    "raw": "0xFE0904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 127,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "case": "velocity_min",
+    "raw": "0x780904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 60,
+      "attributeType": 0,
+      "velocity": 0,
+      "attribute": 0
+    }
+  },
+  {
+    "case": "velocity_max",
+    "raw": "0xFFFF00780904",
+    "decoded": {
+      "messageType": 4,
+      "group": 0,
+      "statusNibble": 9,
+      "channel": 0,
+      "noteNumber": 60,
+      "attributeType": 0,
+      "velocity": 65535,
+      "attribute": 0
+    }
+  },
+  {
+    "case": "typical",
+    "raw": "0x123400801924",
+    "decoded": {
+      "messageType": 4,
+      "group": 2,
+      "statusNibble": 9,
+      "channel": 1,
+      "noteNumber": 64,
+      "attributeType": 0,
+      "velocity": 4660,
+      "attribute": 0
+    }
   }
 ]

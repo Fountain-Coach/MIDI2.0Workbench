@@ -1,0 +1,44 @@
+name: midi2swift-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Generate contract and vectors (static-only)
+        run: |
+          node scripts/extract-static.js
+
+      - name: Generate Swift sources from contract
+        run: |
+          node scripts/codegen-swift.js
+          node scripts/codegen-swift-tests.js
+          node scripts/codegen-profiles.js
+
+      - name: Verify contract and coverage
+        run: |
+          node scripts/verify-contract.js
+
+      - name: Fail if stubs present
+        run: |
+          if grep -R "TODO\|TBD\|fatalError(\"unimplemented\")" swift/Midi2Swift/Sources; then
+            echo "Found stub markers" && exit 1; fi
+
+      - name: Build Swift
+        working-directory: swift/Midi2Swift
+        run: swift build -v
+
+      - name: Run tests
+        working-directory: swift/Midi2Swift
+        run: swift test -v

@@ -1,0 +1,166 @@
+[
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
+    "case": "form_0_ch1_g2",
+    "raw": "0x21D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 0,
+      "statusMSB": 0,
+      "statusLSB": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
+    "case": "form_1_ch1_g2",
+    "raw": "0x121D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 1,
+      "statusMSB": 0,
+      "statusLSB": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
+    "case": "form_2_ch1_g2",
+    "raw": "0x221D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 2,
+      "statusMSB": 0,
+      "statusLSB": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x0",
+    "case": "form_3_ch1_g2",
+    "raw": "0x321D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 3,
+      "statusMSB": 0,
+      "statusLSB": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
+    "case": "form_0_ch1_g2",
+    "raw": "0x100021D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 0,
+      "statusMSB": 0,
+      "statusLSB": 1
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
+    "case": "form_1_ch1_g2",
+    "raw": "0x100121D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 1,
+      "statusMSB": 0,
+      "statusLSB": 1
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
+    "case": "form_2_ch1_g2",
+    "raw": "0x100221D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 2,
+      "statusMSB": 0,
+      "statusLSB": 1
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1FlexDataMessages0x1",
+    "case": "form_3_ch1_g2",
+    "raw": "0x100321D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 3,
+      "statusMSB": 0,
+      "statusLSB": 1
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
+    "case": "form_0_ch1_g2",
+    "raw": "0x200021D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 0,
+      "statusMSB": 0,
+      "statusLSB": 2,
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
+    "case": "form_1_ch1_g2",
+    "raw": "0x200121D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 1,
+      "statusMSB": 0,
+      "statusLSB": 2,
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
+    "case": "form_2_ch1_g2",
+    "raw": "0x200221D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 2,
+      "statusMSB": 0,
+      "statusLSB": 2,
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
+    }
+  },
+  {
+    "name": "FlexDataMessages.SubdivisionClicks1SubdivisionClicks1",
+    "case": "form_3_ch1_g2",
+    "raw": "0x200321D",
+    "decoded": {
+      "messageType": 13,
+      "channel": 1,
+      "group": 2,
+      "form": 3,
+      "statusMSB": 0,
+      "statusLSB": 2,
+      "SubdivisionClicks1": 0,
+      "SubdivisionClicks2": 0
+    }
+  }
+]

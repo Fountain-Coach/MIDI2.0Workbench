@@ -76,3 +76,58 @@ This Project aims to follow the current public MIDI specifications.
 Please use the GitHub Issues to log any bugs, suggestions etc. 
 
 This project is supported and copyrighted by Yamaha Corporation 2020 under MIT. 
+
+## Midi2Swift — Static Swift MIDI 2.0 Library
+
+This repo also contains a static-only Swift library generated from the Workbench source (no runtime coupling). The pipeline extracts protocol facts from the JS/TS sources, writes a canonical JSON contract, then generates fully implemented Swift types and tests.
+
+- Modules: `Core` (bit helpers, UMP containers), `UMP` (generated message types), `CI` (MIDI-CI reducers)
+- Containers: `UMP32`, `UMP64`, `UMP128`
+- Generation outputs: `swift/Midi2Swift/Sources/UMP/Generated/*.swift`
+- Golden vectors: `vectors/golden/*.json`
+
+Quick start:
+- One-liner (full pipeline): `npm run swift:all`
+  - Runs extractor, Swift codegen, test generation, profiles/PE catalogs, verification, then Swift build and tests.
+- Or step-by-step:
+  - Generate contract and vectors: `node scripts/extract-static.js`
+  - Generate Swift: `node scripts/codegen-swift.js`
+  - Generate tests: `node scripts/codegen-swift-tests.js`
+  - Generate Profiles/PE catalogs: `node scripts/codegen-profiles.js`
+  - Verify: `node scripts/verify-contract.js`
+  - Build and test: `cd swift/Midi2Swift && swift build && swift test`
+
+If you encounter module cache permission issues with SwiftPM, use a local module cache:
+
+```
+cd swift/Midi2Swift
+export CLANG_MODULE_CACHE_PATH=$(pwd)/.clangModuleCache
+mkdir -p .clangModuleCache
+swift build
+swift test
+```
+
+Usage example (MIDI 2.0 CV Note On):
+
+```
+import UMP
+
+let note = MIDI20ChannelVoiceMessagesNoteOn(
+  group: 0, channel: 0, notenumber: 60, attributetype: 0, velocity: 0x1234, attribute: 0
+)
+let packet = note.encode()   // UMP64
+let round = MIDI20ChannelVoiceMessagesNoteOn.decode(packet)
+```
+
+MIDI-CI reducers:
+
+```
+import CI
+
+var s = CIState()
+(s, _) = reduce(s, .start)
+(s, _) = reduce(s, .reply)
+// s.status == .completed
+```
+
+CI workflow (`.github/workflows/ci.yml`) runs extractor, codegen, verification, and Swift tests on macOS.
