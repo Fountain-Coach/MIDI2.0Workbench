@@ -17,42 +17,6 @@ public func reduceReport(_ state: CIReportState, _ event: CIReportEvent) -> (CIR
     }
 }
 
-// Property Exchange Get (chunked)
-public enum CIPEGetEvent: Equatable { case start, replyChunk, reply /*end*/, timeout, error }
-public enum CIPEGetStatus: Equatable { case idle, requestSent, chunking, completed, failed }
-public struct CIPEGetState: Equatable { public var status: CIPEGetStatus; public var chunks: Int; public init(_ s: CIPEGetStatus = .idle, chunks: Int = 0) { status = s; self.chunks = chunks } }
-
-@discardableResult
-public func reducePEGet(_ state: CIPEGetState, _ event: CIPEGetEvent) -> (CIPEGetState, [CIAffect]) {
-    var s = state
-    switch (s.status, event) {
-    case (.idle, .start): s.status = .requestSent; return (s, [.none])
-    case (.requestSent, .replyChunk): s.status = .chunking; s.chunks += 1; return (s, [.none])
-    case (.chunking, .replyChunk): s.chunks += 1; return (s, [.none])
-    case (.chunking, .reply), (.requestSent, .reply): s.status = .completed; return (s, [.none])
-    case (.requestSent, .timeout), (.requestSent, .error), (.chunking, .timeout), (.chunking, .error): s.status = .failed; return (s, [.none])
-    default: return (s, [.none])
-    }
-}
-
-// Property Exchange Set (chunked)
-public enum CIPESetEvent: Equatable { case start, replyChunk, reply /*end*/, timeout, error }
-public enum CIPESetStatus: Equatable { case idle, requestSent, chunking, completed, failed }
-public struct CIPESetState: Equatable { public var status: CIPESetStatus; public var chunks: Int; public init(_ s: CIPESetStatus = .idle, chunks: Int = 0) { status = s; self.chunks = chunks } }
-
-@discardableResult
-public func reducePESet(_ state: CIPESetState, _ event: CIPESetEvent) -> (CIPESetState, [CIAffect]) {
-    var s = state
-    switch (s.status, event) {
-    case (.idle, .start): s.status = .requestSent; return (s, [.none])
-    case (.requestSent, .replyChunk): s.status = .chunking; s.chunks += 1; return (s, [.none])
-    case (.chunking, .replyChunk): s.chunks += 1; return (s, [.none])
-    case (.chunking, .reply), (.requestSent, .reply): s.status = .completed; return (s, [.none])
-    case (.requestSent, .timeout), (.requestSent, .error), (.chunking, .timeout), (.chunking, .error): s.status = .failed; return (s, [.none])
-    default: return (s, [.none])
-    }
-}
-
 // Subscription (simple request/reply)
 public enum CISubEvent: Equatable { case start, reply, timeout, error }
 public enum CISubStatus: Equatable { case idle, requestSent, completed, failed }

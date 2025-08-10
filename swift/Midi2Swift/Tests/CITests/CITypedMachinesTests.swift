@@ -2,7 +2,7 @@ import XCTest
 @testable import CI
 
 final class CITypedMachinesTests: XCTestCase {
-    func testReportAndPEMachines() throws {
+    func testReportAndSubscription() throws {
         let url = try locateVectors().appendingPathComponent("ci_statechart.json")
         let data = try Data(contentsOf: url)
         let arr = try JSONSerialization.jsonObject(with: data) as! [[String: Any]]
@@ -23,56 +23,6 @@ final class CITypedMachinesTests: XCTestCase {
                     }
                 }()
                 (st, _) = reduceReport(st, ev)
-            }
-            let expect = (test["expect"] as! String).lowercased()
-            switch expect {
-            case "completed": XCTAssertEqual(st.status, .completed)
-            case "failed": XCTAssertEqual(st.status, .failed)
-            default: XCTFail("Unknown expectation: \(expect)")
-            }
-        }
-
-        // Property Exchange Get (chunked)
-        for test in arr where (test["machine"] as? String)?.contains("InquiryGetPropertyData") == true {
-            let seq = test["sequence"] as! [String]
-            var st = CIPEGetState(.idle)
-            for evStr in seq {
-                let ev: CIPEGetEvent = {
-                    switch evStr.lowercased() {
-                    case "start": return .start
-                    case "replychunk": return .replyChunk
-                    case "reply": return .reply
-                    case "timeout": return .timeout
-                    case "error": return .error
-                    default: return .error
-                    }
-                }()
-                (st, _) = reducePEGet(st, ev)
-            }
-            let expect = (test["expect"] as! String).lowercased()
-            switch expect {
-            case "completed": XCTAssertEqual(st.status, .completed)
-            case "failed": XCTAssertEqual(st.status, .failed)
-            default: XCTFail("Unknown expectation: \(expect)")
-            }
-        }
-
-        // Property Exchange Set (chunked)
-        for test in arr where (test["machine"] as? String)?.contains("InquirySetPropertyData") == true {
-            let seq = test["sequence"] as! [String]
-            var st = CIPESetState(.idle)
-            for evStr in seq {
-                let ev: CIPESetEvent = {
-                    switch evStr.lowercased() {
-                    case "start": return .start
-                    case "replychunk": return .replyChunk
-                    case "reply": return .reply
-                    case "timeout": return .timeout
-                    case "error": return .error
-                    default: return .error
-                    }
-                }()
-                (st, _) = reducePESet(st, ev)
             }
             let expect = (test["expect"] as! String).lowercased()
             switch expect {

@@ -8,10 +8,6 @@ final class CatalogTests: XCTestCase {
         if let p = ProfilesCatalog.lookup(bank: 0x21, index: 0x00) {
             XCTAssertEqual(p.name, "Default Control Change Mapping")
         }
-        // Property Exchange
-        XCTAssertFalse(PropertyExchangeCatalog.all.isEmpty)
-        XCTAssertTrue(PropertyExchangeCatalog.all.contains("DeviceInfo"))
-        XCTAssertTrue(PropertyExchangeCatalog.all.contains("ResourceList"))
     }
 }
 
