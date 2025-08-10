@@ -7,7 +7,12 @@ ROOT_DIR=$(cd "$(dirname "$0")/.." && pwd)
 PKG_DIR="$ROOT_DIR/swift/Midi2Swift"
 
 echo "[1/6] Extracting static contract and vectors…"
-node "$ROOT_DIR/scripts/extract-static.js"
+# Requires `ts-node` (via npx) or a precompiled `extract-static.js`.
+# Exit immediately if extraction fails.
+if ! npx ts-node "$ROOT_DIR/scripts/extract-static.ts"; then
+  echo "Static extraction failed" >&2
+  exit 1
+fi
 
 echo "[2/6] Generating Swift sources…"
 node "$ROOT_DIR/scripts/codegen-swift.js"
