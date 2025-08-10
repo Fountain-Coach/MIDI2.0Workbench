@@ -56,8 +56,8 @@ function genMessageSwift(msg) {
   else encodeLines.push(`        var lo: UInt64 = 0`, `        var hi: UInt64 = 0`);
   for (const f of msg.fields) {
     const valExpr = f.value !== undefined ? String(f.value) : `UInt64(${swiftPropName(f.name)})`;
-    if (container === 'UMP128') {
-      encodeLines.push(`        { let tmp = setBits128(lo, hi, ${valExpr}, offset: ${f.bitOffset}, width: ${f.bitWidth}); lo = tmp.0; hi = tmp.1 }`);
+  if (container === 'UMP128') {
+      encodeLines.push(`        (lo, hi) = setBits128(lo, hi, ${valExpr}, offset: ${f.bitOffset}, width: ${f.bitWidth})`);
     } else {
       const cast = container === 'UMP32' ? `UInt32(${valExpr})` : `UInt64(${valExpr})`;
       encodeLines.push(`        raw = ${helper.set}(raw, value: ${cast}, offset: ${f.bitOffset}, width: ${f.bitWidth})`);

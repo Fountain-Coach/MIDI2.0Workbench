@@ -89,23 +89,23 @@ public struct MIDIEndpointMIDIEndpointProductInstanceIdNotify: Equatable {
     public func encode() -> UMP128 {
         var lo: UInt64 = 0
         var hi: UInt64 = 0
-        { let tmp = setBits128(lo, hi, 15, offset: 0, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(form), offset: 4, width: 2); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, 4, offset: 6, width: 10); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte1), offset: 16, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte2), offset: 24, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte3), offset: 32, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte4), offset: 40, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte5), offset: 48, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte6), offset: 56, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte7), offset: 64, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte8), offset: 72, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte9), offset: 80, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte10), offset: 88, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte11), offset: 96, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte12), offset: 104, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte13), offset: 112, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(byte14), offset: 120, width: 8); lo = tmp.0; hi = tmp.1 }
+        (lo, hi) = setBits128(lo, hi, 15, offset: 0, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(form), offset: 4, width: 2)
+        (lo, hi) = setBits128(lo, hi, 4, offset: 6, width: 10)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte1), offset: 16, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte2), offset: 24, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte3), offset: 32, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte4), offset: 40, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte5), offset: 48, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte6), offset: 56, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte7), offset: 64, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte8), offset: 72, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte9), offset: 80, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte10), offset: 88, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte11), offset: 96, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte12), offset: 104, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte13), offset: 112, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(byte14), offset: 120, width: 8)
         return UMP128(lo: lo, hi: hi)
     }
 

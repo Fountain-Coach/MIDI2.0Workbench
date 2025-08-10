@@ -24,10 +24,10 @@ public struct MIDIEndpointStreamConfigurationRequest: Equatable {
     public func encode() -> UMP128 {
         var lo: UInt64 = 0
         var hi: UInt64 = 0
-        { let tmp = setBits128(lo, hi, 15, offset: 0, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(form), offset: 4, width: 2); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, 5, offset: 6, width: 10); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(_protocol), offset: 16, width: 8); lo = tmp.0; hi = tmp.1 }
+        (lo, hi) = setBits128(lo, hi, 15, offset: 0, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(form), offset: 4, width: 2)
+        (lo, hi) = setBits128(lo, hi, 5, offset: 6, width: 10)
+        (lo, hi) = setBits128(lo, hi, UInt64(_protocol), offset: 16, width: 8)
         return UMP128(lo: lo, hi: hi)
     }
 

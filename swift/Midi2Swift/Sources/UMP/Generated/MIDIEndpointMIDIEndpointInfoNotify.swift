@@ -39,13 +39,13 @@ public struct MIDIEndpointMIDIEndpointInfoNotify: Equatable {
     public func encode() -> UMP128 {
         var lo: UInt64 = 0
         var hi: UInt64 = 0
-        { let tmp = setBits128(lo, hi, 15, offset: 0, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(form), offset: 4, width: 2); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, 1, offset: 6, width: 10); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(umpversionmajor), offset: 16, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(umpversionminor), offset: 24, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(staticfunctionblocks), offset: 32, width: 1); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(numberoffunctionblocks), offset: 33, width: 7); lo = tmp.0; hi = tmp.1 }
+        (lo, hi) = setBits128(lo, hi, 15, offset: 0, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(form), offset: 4, width: 2)
+        (lo, hi) = setBits128(lo, hi, 1, offset: 6, width: 10)
+        (lo, hi) = setBits128(lo, hi, UInt64(umpversionmajor), offset: 16, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(umpversionminor), offset: 24, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(staticfunctionblocks), offset: 32, width: 1)
+        (lo, hi) = setBits128(lo, hi, UInt64(numberoffunctionblocks), offset: 33, width: 7)
         return UMP128(lo: lo, hi: hi)
     }
 

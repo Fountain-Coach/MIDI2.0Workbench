@@ -40,18 +40,18 @@ public struct SysEx8andMDSMixedDataSetHeader: Equatable {
     public func encode() -> UMP128 {
         var lo: UInt64 = 0
         var hi: UInt64 = 0
-        { let tmp = setBits128(lo, hi, 5, offset: 0, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(group), offset: 4, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, 8, offset: 8, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(bytecount), offset: 12, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(mdsid), offset: 16, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(numberofvalidbytesinthismessagechunk), offset: 24, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(numberofchunksinmixeddataset), offset: 32, width: 16); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(numberofthischunk), offset: 48, width: 16); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(manufacturerid), offset: 64, width: 16); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(deviceid), offset: 80, width: 16); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(subid1), offset: 96, width: 16); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(subid2), offset: 112, width: 16); lo = tmp.0; hi = tmp.1 }
+        (lo, hi) = setBits128(lo, hi, 5, offset: 0, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(group), offset: 4, width: 4)
+        (lo, hi) = setBits128(lo, hi, 8, offset: 8, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(bytecount), offset: 12, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(mdsid), offset: 16, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(numberofvalidbytesinthismessagechunk), offset: 24, width: 8)
+        (lo, hi) = setBits128(lo, hi, UInt64(numberofchunksinmixeddataset), offset: 32, width: 16)
+        (lo, hi) = setBits128(lo, hi, UInt64(numberofthischunk), offset: 48, width: 16)
+        (lo, hi) = setBits128(lo, hi, UInt64(manufacturerid), offset: 64, width: 16)
+        (lo, hi) = setBits128(lo, hi, UInt64(deviceid), offset: 80, width: 16)
+        (lo, hi) = setBits128(lo, hi, UInt64(subid1), offset: 96, width: 16)
+        (lo, hi) = setBits128(lo, hi, UInt64(subid2), offset: 112, width: 16)
         return UMP128(lo: lo, hi: hi)
     }
 

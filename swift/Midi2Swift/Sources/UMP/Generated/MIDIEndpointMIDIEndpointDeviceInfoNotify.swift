@@ -74,20 +74,20 @@ public struct MIDIEndpointMIDIEndpointDeviceInfoNotify: Equatable {
     public func encode() -> UMP128 {
         var lo: UInt64 = 0
         var hi: UInt64 = 0
-        { let tmp = setBits128(lo, hi, 15, offset: 0, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(form), offset: 4, width: 2); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, 2, offset: 6, width: 10); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(manufactureridbyte1), offset: 41, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(manufactureridbyte2), offset: 49, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(manufactureridbyte3), offset: 57, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(familyidlsb), offset: 65, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(familyidmsb), offset: 73, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(modelidlsb), offset: 81, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(modelidmsb), offset: 89, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(softwarerevisionlevel1), offset: 97, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(softwarerevisionlevel2), offset: 105, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(softwarerevisionlevel3), offset: 113, width: 7); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(softwarerevisionlevel4), offset: 121, width: 7); lo = tmp.0; hi = tmp.1 }
+        (lo, hi) = setBits128(lo, hi, 15, offset: 0, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(form), offset: 4, width: 2)
+        (lo, hi) = setBits128(lo, hi, 2, offset: 6, width: 10)
+        (lo, hi) = setBits128(lo, hi, UInt64(manufactureridbyte1), offset: 41, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(manufactureridbyte2), offset: 49, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(manufactureridbyte3), offset: 57, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(familyidlsb), offset: 65, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(familyidmsb), offset: 73, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(modelidlsb), offset: 81, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(modelidmsb), offset: 89, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(softwarerevisionlevel1), offset: 97, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(softwarerevisionlevel2), offset: 105, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(softwarerevisionlevel3), offset: 113, width: 7)
+        (lo, hi) = setBits128(lo, hi, UInt64(softwarerevisionlevel4), offset: 121, width: 7)
         return UMP128(lo: lo, hi: hi)
     }
 

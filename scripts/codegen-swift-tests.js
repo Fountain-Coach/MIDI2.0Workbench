@@ -10,7 +10,14 @@ function swiftTypeName(name){ return name.split(/[^A-Za-z0-9]+/).filter(Boolean)
 function swiftPropName(name){ const clean=name.replace(/[^A-Za-z0-9]+/g,' '); const parts=clean.trim().split(/\s+/); const cc=parts.map((p,i)=>i===0?p.toLowerCase():p[0].toUpperCase()+p.slice(1)).join(''); const kw=new Set(['class','struct','protocol','enum','extension','import','let','var','if','else','switch','case','default','return','in','for','while','do','catch']); return kw.has(cc)?`_${cc}`:cc; }
 function typeForWidth(w){ if(w<=8)return'UInt8'; if(w<=16)return'UInt16'; if(w<=32)return'UInt32'; return'UInt64'; }
 
-function genFactory(msg){ const t=swiftTypeName(msg.name); const vars=msg.fields.filter(f=>f.value===undefined); const params=vars.map(f=>`${swiftPropName(f.name)}: ${typeForWidth(f.bitWidth)}`).join(', '); const args=vars.map(f=>`${swiftPropName(f.name)}: ${swiftPropName(f.name)}`).join(', '); return `private func make_${t}(${params}) -> ${t} { ${t}(${args}) }`; }
+function genFactory(msg){
+  const t = swiftTypeName(msg.name);
+  const vars = msg.fields.filter(f => f.value === undefined);
+  const params = vars.map(f => `_${' '}${swiftPropName(f.name)}: ${typeForWidth(f.bitWidth)}`).join(', ');
+  const args = vars.map(f => `${swiftPropName(f.name)}: ${swiftPropName(f.name)}`).join(', ');
+  // Use unlabeled external labels but keep internal names for body
+  return `private func make_${t}(${params}) -> ${t} { ${t}(${args}) }`;
+}
 
 function genCase(msg){ const t=swiftTypeName(msg.name); const c=msg.container; const vars=msg.fields.filter(f=>f.value===undefined); const extracts=vars.map(f=>{ const p=swiftPropName(f.name); return `let ${p} = ${typeForWidth(f.bitWidth)}(d["${f.name}"] as! Int)`; }).join('\n                '); const args=vars.map(f=>swiftPropName(f.name)).join(', ');
   if(c==='UMP32'){
@@ -48,7 +55,9 @@ function main(){
   const root=process.env.WORKBENCH_ROOT||process.cwd();
   const contract=readJSON(path.join(root,'contract','midi2.json'));
   const outFile=path.join(root,'swift','Midi2Swift','Tests','UMPTests','AllMessagesAutoVectorTests.swift');
-  const factories=contract.messages.map(genFactory).join('\n');
+  // De-duplicate factory helpers by message name
+  const seen=new Set();
+  const factories=contract.messages.filter(m=>{ if(seen.has(m.name)) return false; seen.add(m.name); return true; }).map(genFactory).join('\n');
   const cases=contract.messages.map(genCase).join('\n            ');
   const file=`import XCTest
 @testable import UMP

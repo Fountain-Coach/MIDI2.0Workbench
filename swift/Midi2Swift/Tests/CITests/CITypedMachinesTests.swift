@@ -2,39 +2,73 @@ import XCTest
 @testable import CI
 
 final class CITypedMachinesTests: XCTestCase {
-    func testReportAndSubscription() throws {
+    func testAllFromVectors() throws {
         let url = try locateVectors().appendingPathComponent("ci_statechart.json")
         let data = try Data(contentsOf: url)
         let arr = try JSONSerialization.jsonObject(with: data) as! [[String: Any]]
 
-        // MIDI Message Report
-        for test in arr where (test["machine"] as? String)?.contains("InquiryMIDIMessageReport") == true {
-            let seq = test["sequence"] as! [String]
-            var st = CIReportState(.idle)
-            for evStr in seq {
-                let ev: CIReportEvent = {
-                    switch evStr.lowercased() {
-                    case "start": return .start
-                    case "replybegin": return .replyBegin
-                    case "replyend": return .replyEnd
-                    case "timeout": return .timeout
-                    case "error": return .error
-                    default: return .error
-                    }
-                }()
-                (st, _) = reduceReport(st, ev)
-            }
-            let expect = (test["expect"] as! String).lowercased()
-            switch expect {
-            case "completed": XCTAssertEqual(st.status, .completed)
-            case "failed": XCTAssertEqual(st.status, .failed)
-            default: XCTFail("Unknown expectation: \(expect)")
-            }
-        }
+        for test in arr {
+            let name = (test["machine"] as? String) ?? ""
+            let seq = (test["sequence"] as? [String]) ?? []
+            let expect = (test["expect"] as? String)?.lowercased() ?? "completed"
 
-        // Subscription (simple request/reply)
-        for test in arr where (test["machine"] as? String)?.hasSuffix("Subscription") == true {
-            let seq = test["sequence"] as! [String]
+            if name.contains("InquiryMIDIMessageReport") || seq.contains(where: { $0.lowercased().contains("replybegin") || $0.lowercased().contains("replyend") }) {
+                // Report begin/end
+                var st = CIReportState(.idle)
+                for evStr in seq {
+                    let ev: CIReportEvent = {
+                        switch evStr.lowercased() {
+                        case "start": return .start
+                        case "replybegin": return .replyBegin
+                        case "replyend": return .replyEnd
+                        case "timeout": return .timeout
+                        case "error": return .error
+                        default: return .error
+                        }
+                    }()
+                    (st, _) = reduceReport(st, ev)
+                }
+                switch expect {
+                case "completed": XCTAssertEqual(st.status, .completed, name)
+                case "failed": XCTAssertEqual(st.status, .failed, name)
+                default: XCTFail("Unknown expectation: \(expect)")
+                }
+                continue
+            }
+
+            if seq == ["Notify"] || name.contains("Notify") || name.contains("ReportMessage") || name.contains("NAK") || name.contains("ACK") {
+                // Notify-only
+                var st = CINotifyState()
+                for _ in seq { (st, _) = reduceNotify(st, .notify) }
+                XCTAssertEqual(st.status, .completed, name)
+                continue
+            }
+
+            if seq.contains("ReplyChunk") {
+                // Chunked reply
+                var st = CIChunkState(.idle)
+                for evStr in seq {
+                    let ev: CIChunkEvent = {
+                        switch evStr.lowercased() {
+                        case "start": return .start
+                        case "replychunk": return .replyChunk
+                        case "reply": return .reply
+                        case "timeout": return .timeout
+                        case "error": return .error
+                        default: return .error
+                        }
+                    }()
+                    (st, _) = reduceChunked(st, ev)
+                }
+                switch expect {
+                case "completed": XCTAssertEqual(st.status, .completed, name)
+                case "failed": XCTAssertEqual(st.status, .failed, name)
+                default: XCTFail("Unknown expectation: \(expect)")
+                }
+                continue
+            }
+
+            // Default: simple subscription (Start/Reply or Start/Timeout)
             var st = CISubState(.idle)
             for evStr in seq {
                 let ev: CISubEvent = {
@@ -48,10 +82,9 @@ final class CITypedMachinesTests: XCTestCase {
                 }()
                 (st, _) = reduceSubscription(st, ev)
             }
-            let expect = (test["expect"] as! String).lowercased()
             switch expect {
-            case "completed": XCTAssertEqual(st.status, .completed)
-            case "failed": XCTAssertEqual(st.status, .failed)
+            case "completed": XCTAssertEqual(st.status, .completed, name)
+            case "failed": XCTAssertEqual(st.status, .failed, name)
             default: XCTFail("Unknown expectation: \(expect)")
             }
         }

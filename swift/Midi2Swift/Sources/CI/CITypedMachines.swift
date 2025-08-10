@@ -32,3 +32,32 @@ public func reduceSubscription(_ state: CISubState, _ event: CISubEvent) -> (CIS
     default: return (s, [.none])
     }
 }
+
+// Chunked reply (optional chunks before final reply)
+public enum CIChunkEvent: Equatable { case start, replyChunk, reply, timeout, error }
+public enum CIChunkStatus: Equatable { case idle, requestSent, chunking, completed, failed }
+public struct CIChunkState: Equatable { public var status: CIChunkStatus; public init(_ s: CIChunkStatus = .idle) { status = s } }
+
+@discardableResult
+public func reduceChunked(_ state: CIChunkState, _ event: CIChunkEvent) -> (CIChunkState, [CIAffect]) {
+    var s = state
+    switch (s.status, event) {
+    case (.idle, .start): s.status = .requestSent; return (s, [.none])
+    case (.requestSent, .replyChunk): s.status = .chunking; return (s, [.none])
+    case (.chunking, .replyChunk): return (s, [.none])
+    case (.requestSent, .reply), (.chunking, .reply): s.status = .completed; return (s, [.none])
+    case (.requestSent, .timeout), (.requestSent, .error), (.chunking, .timeout), (.chunking, .error): s.status = .failed; return (s, [.none])
+    default: return (s, [.none])
+    }
+}
+
+// Notify-only (single notify transitions to completed)
+public enum CINotifyEvent: Equatable { case notify }
+public enum CINotifyStatus: Equatable { case completed }
+public struct CINotifyState: Equatable { public var status: CINotifyStatus = .completed; public init() {} }
+
+@discardableResult
+public func reduceNotify(_ state: CINotifyState, _ event: CINotifyEvent) -> (CINotifyState, [CIAffect]) {
+    // stateless; always completed
+    return (state, [.none])
+}

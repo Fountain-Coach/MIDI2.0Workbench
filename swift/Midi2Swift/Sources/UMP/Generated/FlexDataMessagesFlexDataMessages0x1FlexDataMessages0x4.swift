@@ -29,12 +29,12 @@ public struct FlexDataMessagesFlexDataMessages0x1FlexDataMessages0x4: Equatable 
     public func encode() -> UMP128 {
         var lo: UInt64 = 0
         var hi: UInt64 = 0
-        { let tmp = setBits128(lo, hi, 13, offset: 0, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(channel), offset: 4, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(group), offset: 8, width: 4); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, UInt64(form), offset: 12, width: 2); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, 1, offset: 16, width: 8); lo = tmp.0; hi = tmp.1 }
-        { let tmp = setBits128(lo, hi, 4, offset: 24, width: 8); lo = tmp.0; hi = tmp.1 }
+        (lo, hi) = setBits128(lo, hi, 13, offset: 0, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(channel), offset: 4, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(group), offset: 8, width: 4)
+        (lo, hi) = setBits128(lo, hi, UInt64(form), offset: 12, width: 2)
+        (lo, hi) = setBits128(lo, hi, 1, offset: 16, width: 8)
+        (lo, hi) = setBits128(lo, hi, 4, offset: 24, width: 8)
         return UMP128(lo: lo, hi: hi)
     }
 
