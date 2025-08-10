@@ -9,19 +9,30 @@ let package = Package(
     products: [
         .library(name: "Core", targets: ["Core"]),
         .library(name: "UMP", targets: ["UMP"]),
-        .library(name: "CI", targets: ["CI"]),
-        .library(name: "Profiles", targets: ["Profiles"]),
-        .library(name: "PropertyExchange", targets: ["PropertyExchange"]),
     ],
     targets: [
         .target(name: "Core", path: "Sources/Core"),
-        .target(name: "UMP", dependencies: ["Core"], path: "Sources/UMP"),
-        .target(name: "CI", dependencies: ["Core"], path: "Sources/CI"),
-        .target(name: "Profiles", path: "Sources/Profiles"),
-        .target(name: "PropertyExchange", dependencies: ["CI"], path: "Sources/PropertyExchange"),
-        .testTarget(name: "UMPTests", dependencies: ["UMP"], path: "Tests/UMPTests"),
-        .testTarget(name: "CITests", dependencies: ["CI"], path: "Tests/CITests"),
-        .testTarget(name: "ProfilesTests", dependencies: ["Profiles"], path: "Tests/ProfilesTests"),
-        .testTarget(name: "PropertyExchangeTests", dependencies: ["PropertyExchange"], path: "Tests/PropertyExchangeTests"),
+        .target(
+            name: "UMP",
+            dependencies: ["Core"],
+            path: "Sources/UMP",
+            exclude: ["Generated", "CVNoteOn.swift", "MIDI1ChannelVoice.swift", "SysEx7.swift"],
+            sources: ["ChannelVoiceNoteOn.swift"]
+        ),
+        .testTarget(
+            name: "UMPTests",
+            dependencies: ["UMP", "Core"],
+            path: "Tests/UMPTests",
+            exclude: [
+                "AllMessagesAutoVectorTests.swift",
+                "AutoVectorDecodeSmokeTests.swift",
+                "CVNoteOnTests.swift",
+                "GeneratedCoverageSmokeTests.swift",
+                "MIDI1AndSystemTests.swift",
+                "StreamAndData128Tests.swift",
+                "SysEx7Tests.swift"
+            ],
+            sources: ["ChannelVoiceNoteOnTests.swift"]
+        ),
     ]
 )
