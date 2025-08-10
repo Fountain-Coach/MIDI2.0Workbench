@@ -1,5 +1,5 @@
 import XCTest
-@testable import CI
+@testable import PropertyExchange
 
 final class PropertyExchangeVectorTests: XCTestCase {
     func testPEVectors() throws {
@@ -11,9 +11,9 @@ final class PropertyExchangeVectorTests: XCTestCase {
             let seq = test["sequence"] as! [String]
             let expect = (test["expect"] as! String).lowercased()
             if machine == "inquirygetpropertydata" {
-                var st = CIPEGetState(.idle)
+                var st = PEGetState(.idle)
                 for evStr in seq {
-                    let ev: CIPEGetEvent = {
+                    let ev: PEGetEvent = {
                         switch evStr.lowercased() {
                         case "start": return .start
                         case "replychunk": return .replyChunk
@@ -31,9 +31,9 @@ final class PropertyExchangeVectorTests: XCTestCase {
                 default: XCTFail("Unknown expectation: \(expect)")
                 }
             } else if machine == "inquirysetpropertydata" {
-                var st = CIPESetState(.idle)
+                var st = PESetState(.idle)
                 for evStr in seq {
-                    let ev: CIPESetEvent = {
+                    let ev: PESetEvent = {
                         switch evStr.lowercased() {
                         case "start": return .start
                         case "replychunk": return .replyChunk
