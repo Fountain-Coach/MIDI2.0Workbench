@@ -142,6 +142,10 @@ function main(){
       // Default: fall back to best-effort ordered attempts
       entries.push(`        case ${key}:\n${genTryList(msgs, container)}`);
     }
+    if (!keys.includes('any')) {
+      // ensure switch is exhaustive
+      entries.push('        default:\n            return nil');
+    }
     const getMt = container==='UMP32' ? `let mt = getBits32(ump.raw, offset: 0, width: 4)`
                : container==='UMP64' ? `let mt = getBits(ump.raw, offset: 0, width: 4)`
                : `let mt = getBits128(ump.lo, ump.hi, offset: 0, width: 4)`;

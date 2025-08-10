@@ -132,6 +132,8 @@ let mt = getBits32(ump.raw, offset: 0, width: 4)
         if (getBits32(ump.raw, offset: 0, width: 4) == 2 && getBits32(ump.raw, offset: 8, width: 4) == 10) { if let v = MIDI10ChannelVoiceMessagesPolyPressure.decode(ump) { return .MIDI10ChannelVoiceMessagesPolyPressure(v) } }
         if (getBits32(ump.raw, offset: 0, width: 4) == 2 && getBits32(ump.raw, offset: 8, width: 4) == 12) { if let v = MIDI10ChannelVoiceMessagesProgramChangeMessage.decode(ump) { return .MIDI10ChannelVoiceMessagesProgramChangeMessage(v) } }
         return nil
+        default:
+            return nil
         }
     }
     public static func decode(_ ump: UMP64) -> UMPAnyMessage? {
@@ -165,6 +167,8 @@ let mt = getBits(ump.raw, offset: 0, width: 4)
         if (getBits(ump.raw, offset: 0, width: 4) == 4 && getBits(ump.raw, offset: 8, width: 4) == 5) { if let v = MIDI20ChannelVoiceMessagesRelativeAssignableControllerNRPN.decode(ump) { return .MIDI20ChannelVoiceMessagesRelativeAssignableControllerNRPN(v) } }
         if (getBits(ump.raw, offset: 0, width: 4) == 4 && getBits(ump.raw, offset: 8, width: 4) == 4) { if let v = MIDI20ChannelVoiceMessagesRelativeRegisteredControllerRPN.decode(ump) { return .MIDI20ChannelVoiceMessagesRelativeRegisteredControllerRPN(v) } }
         return nil
+        default:
+            return nil
         }
     }
     public static func decode(_ ump: UMP128) -> UMPAnyMessage? {
@@ -255,6 +259,8 @@ let mt = getBits128(ump.lo, ump.hi, offset: 0, width: 4)
         if (getBits128(ump.lo, ump.hi, offset: 0, width: 4) == 15 && getBits128(ump.lo, ump.hi, offset: 6, width: 10) == 6) { if let v = MIDIEndpointStreamConfigurationNotify.decode(ump) { return .MIDIEndpointStreamConfigurationNotify(v) } }
         if (getBits128(ump.lo, ump.hi, offset: 0, width: 4) == 15 && getBits128(ump.lo, ump.hi, offset: 6, width: 10) == 5) { if let v = MIDIEndpointStreamConfigurationRequest.decode(ump) { return .MIDIEndpointStreamConfigurationRequest(v) } }
         return nil
+        default:
+            return nil
         }
     }
 }

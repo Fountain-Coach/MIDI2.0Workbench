@@ -26,11 +26,10 @@ final class AutoVectorDecodeSmokeTests: XCTestCase {
         try decode64(groups, name: "SysEx.System Exclusive End Packet") { raw in
             XCTAssertNotNil(SysExSystemExclusiveEndPacket.decode(.init(raw: raw)))
         }
-        try decode64(groups, name: "SysEx8 and MDS.System Exclusive 8 Start Packet") { raw in
-            XCTAssertNotNil(SysEx8andMDSSystemExclusive8StartPacket.decode(.init(raw: raw)))
-        }
-
         // UMP128
+        try decode128(groups, name: "SysEx8 and MDS.System Exclusive 8 Start Packet") { lo, hi in
+            XCTAssertNotNil(SysEx8andMDSSystemExclusive8StartPacket.decode(.init(lo: lo, hi: hi)))
+        }
         try decode128(groups, name: "MIDI Endpoint.MIDI Endpoint Info Notify") { lo, hi in
             XCTAssertNotNil(MIDIEndpointMIDIEndpointInfoNotify.decode(.init(lo: lo, hi: hi)))
         }
